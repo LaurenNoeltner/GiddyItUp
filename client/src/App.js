@@ -1,24 +1,33 @@
+import Header from "./components/Header";
+// import Home from "./pages/Home";
+import Bounty from "./components/Bounty";
+import Saloon from "./components/Saloon";
+import React, { Component } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from "react-router-dom";
 
+const { default: Header } = require("./components/Header");
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Whaddup React Rulz</h1>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <header className="App-header">
+            <h1>Whaddup React Rulz</h1>
+            <Header />
+            <Switch>
+              <Route exact path="/Saloon" component={Saloon} />
+              <Route exact path="/Bounty" component={Bounty} />
+            </Switch>
+          </header>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
