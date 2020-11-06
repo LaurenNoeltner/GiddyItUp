@@ -1,25 +1,19 @@
-import logo from "./logo.svg";
-import "./App.css";
+const { default: Navbar } = require("./components/Navbar");
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Whaddup React Rulz</h1>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <h1>Whaddup React Rulz</h1>
+          <Navbar />
+          <Switch>
+            <Route exact path="/Saloon" component={Saloon} />
+            <Route exact path="/Bounty" component={Bounty} />
+          </Switch>
+        </header>
+      </div>
+    </Router>
   );
 }
 
