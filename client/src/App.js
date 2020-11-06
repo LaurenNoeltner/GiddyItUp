@@ -1,5 +1,4 @@
 import Header from "./components/Header";
-// import Home from "./pages/Home";
 import Bounty from "./components/Bounty";
 import Saloon from "./components/Saloon";
 import React, { Component } from "react";
@@ -8,8 +7,6 @@ import {
   Route,
   Switch
 } from "react-router-dom";
-
-const { default: Header } = require("./components/Header");
 
 class App extends Component {
   render() {
