@@ -2,18 +2,7 @@ import Header from "./components/Header";
 import Bounty from "./components/Bounty";
 import Saloon from "./components/Saloon";
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  // Link,
-  // Redirect,
-  // useLocation,
-} from "react-router-dom";
-// import Footer from "./components/Footer";
-// import axios from "axios";
-
-// const { default: Header } = require("./components/Header");
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
   render() {
