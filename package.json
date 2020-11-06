@@ -31,7 +31,8 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.10.13",
     "path": "^0.12.7",
-    "react-bootstrap": "^1.4.0"
+    "react-bootstrap": "^1.4.0",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
