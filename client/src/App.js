@@ -1,5 +1,4 @@
 import Header from "./components/Header";
-// import Home from "./pages/Home";
 import Bounty from "./components/Bounty";
 import Saloon from "./components/Saloon";
 import React, { Component } from "react";
@@ -14,7 +13,7 @@ import {
 // import Footer from "./components/Footer";
 // import axios from "axios";
 
-const { default: Navbar } = require("./components/Header");
+// const { default: Header } = require("./components/Header");
 
 class App extends Component {
   render() {
