@@ -15,7 +15,7 @@ class Bounty extends Component {
                 <div className="bountyContainer col-md-8">
                     <div className="row" id="row1">
                         <div className="taskContainer col-md-3">
-                            1
+                            Reward: 45 silver | Walk Dogs
                         </div>
                         <div className="col-md-1"></div>
                         <div className="taskContainer col-md-3">
