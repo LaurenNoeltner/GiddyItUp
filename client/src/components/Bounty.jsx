@@ -5,8 +5,10 @@ class Bounty extends Component {
     render() {
         return (
             <>
-            <div className="row" id="boardTitle">
-                <div className="col-md-11">Bounty Board</div>
+            <div className="row" >
+                <div className="col-md-4"></div>
+                <div id="boardTitle"className="col-md-3">Bounty Board</div>
+                <div className="col-md-4"></div>
             </div>
             <div className="row">
                 <div className="col-md-2"></div>
