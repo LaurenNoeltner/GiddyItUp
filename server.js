@@ -10,6 +10,7 @@ const app = express();
 const ParentController = require ("./controllers/parentController");
 const ChildController = require ("./controllers/childController");
 const TaskController = require ("./controllers/taskController");
+const AuthController = require ("./controllers/authController");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -40,9 +41,11 @@ app.get("/api/config", (req, res) => {
   });
 });
 
+app.use(AuthController);
 app.use("/api/parent", ParentController);
 app.use("/api/child", ChildController);
 app.use("/api/task", TaskController);
+
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));

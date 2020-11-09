@@ -97,7 +97,7 @@ class ParentBounty extends Component {
                         </div>
                         <div className="col-md-3"></div>
                     </div>
-                    <div classname="row">
+                    <div className="row">
                         <div className="col-md-3"></div>
                         <div id="formBox" className="col-md-5">
                             <button className="submit">Add Task</button>
