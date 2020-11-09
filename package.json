@@ -25,10 +25,12 @@
   },
   "homepage": "https://github.com/LNoeltner1/GiddyItUp#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "bootstrap": "^4.5.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.13",
     "path": "^0.12.7",
     "react-bootstrap": "^1.4.0",
