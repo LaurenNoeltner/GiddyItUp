@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 const ParentController = require ("./controllers/parentController");
+const ChildController = require ("./controllers/childController");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -39,6 +40,7 @@ app.get("/api/config", (req, res) => {
 });
 
 app.use("/api/parent", ParentController);
+app.use("/api/child", ChildController);
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
