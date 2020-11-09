@@ -1,4 +1,5 @@
 module.exports = {
     Parent: require("./parent"),
-    Child: require("./child")
+    Child: require("./child"),
+    Task: require("./task")
 }
