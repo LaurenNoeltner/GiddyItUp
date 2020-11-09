@@ -2,8 +2,8 @@ import React from 'react';
 
 function CardContainer(props) {
     return (
-        <div>
-            
+        <div className="jumbotron card-container">
+          <Card />  
         </div>
     );
 }
