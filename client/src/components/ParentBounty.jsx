@@ -69,7 +69,15 @@ class ParentBounty extends Component {
                         <div className="col-md-3"></div>
                         <div id="formBox" className="col-md-5">
                             <label>Task Name</label>
-                            <input id="taskName" title="What is the task name?" required></input>
+                            <input id="taskInput" title="What is the task name?" required></input>
+                        </div>
+                        <div className="col-md-3"></div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-3"></div>
+                        <div id="formBox" className="col-md-5">
+                            <label>Location</label>
+                            <input id="locationInput" title="Where does it need to be done?" required></input>
                         </div>
                         <div className="col-md-3"></div>
                     </div>
@@ -77,7 +85,7 @@ class ParentBounty extends Component {
                         <div className="col-md-3"></div>
                         <div id="formBox" className="col-md-5">
                             <label>Description</label>
-                            <input id="description" title="Describe the task..." required></input>
+                            <input id="descriptionInput" title="Describe the task..." required></input>
                         </div>
                         <div className="col-md-3"></div>
                     </div>
@@ -85,7 +93,14 @@ class ParentBounty extends Component {
                         <div className="col-md-3"></div>
                         <div id="formBox" className="col-md-5">
                             <label>Reward</label>
-                            <input id="rewardInput" placeholder="Silver Coins..." required></input>
+                            <input id="rewardInput" placeholder="Silver Points..." required></input>
+                        </div>
+                        <div className="col-md-3"></div>
+                    </div>
+                    <div classname="row">
+                        <div className="col-md-3"></div>
+                        <div id="formBox" className="col-md-5">
+                            <button className="submit">Add Task</button>
                         </div>
                         <div className="col-md-3"></div>
                     </div>
