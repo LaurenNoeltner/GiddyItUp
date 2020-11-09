@@ -12,7 +12,6 @@ class App extends Component {
       <Router>
         <div className="App">
           <header className="App-header">
-            <h1>Whaddup React Rulz</h1>
             <Header />
             <Switch>
               <Route exact path="/Saloon" component={Saloon} />

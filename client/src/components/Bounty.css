@@ -1,0 +1,28 @@
+#boardTitle {
+  text-align: center;
+  font-size: larger;
+  background-color: peru;
+  border-style: solid;
+  border-width: 2px;
+  border-color: chocolate;
+  font-family: fantasy;
+}
+
+.bountyContainer {
+  border-color: rgb(78, 60, 27);
+  border-style: solid;
+  border-width: 15px;
+  padding: 10px;
+  margin: 10px;
+  background-color: burlywood;
+}
+
+.taskContainer {
+  border-style: solid;
+  border-width: 1px;
+  border-color: chocolate;
+  background-color: papayawhip;
+  margin: 5px;
+  margin-left: 15px;
+  text-align: center;
+}
