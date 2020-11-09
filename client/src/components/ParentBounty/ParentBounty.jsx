@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+import "./ParentBounty.css";
 
+
+// Make these functions: V V
+// handleInputChange
+// handleFormSubmit
+// handleClick
+
+//note:
+//add name attr and handleInputChange to all inputs
+//add handleClick to submit button
 
 class ParentBounty extends Component {
     render() {
@@ -69,7 +79,7 @@ class ParentBounty extends Component {
                         <div className="col-md-3"></div>
                         <div id="formBox" className="col-md-5">
                             <label>Task Name</label>
-                            <input id="taskInput" title="What is the task name?" required></input>
+                            <input id="taskInput" placeholder="What is the task name?" required></input>
                         </div>
                         <div className="col-md-3"></div>
                     </div>
@@ -77,7 +87,8 @@ class ParentBounty extends Component {
                         <div className="col-md-3"></div>
                         <div id="formBox" className="col-md-5">
                             <label>Location</label>
-                            <input id="locationInput" title="Where does it need to be done?" required></input>
+                            {/* //add name and handleInputChange for each input */}
+                            <input id="locationInput" placeholder="Where does it need to be done?" required></input>
                         </div>
                         <div className="col-md-3"></div>
                     </div>
@@ -85,7 +96,7 @@ class ParentBounty extends Component {
                         <div className="col-md-3"></div>
                         <div id="formBox" className="col-md-5">
                             <label>Description</label>
-                            <input id="descriptionInput" title="Describe the task..." required></input>
+                            <input id="descriptionInput" placeholder="Describe the task..." required></input>
                         </div>
                         <div className="col-md-3"></div>
                     </div>
@@ -100,7 +111,7 @@ class ParentBounty extends Component {
                     <div classname="row">
                         <div className="col-md-3"></div>
                         <div id="formBox" className="col-md-5">
-                            <button className="submit">Add Task</button>
+                            <button id="addTask" className="submit">Add Task</button>
                         </div>
                         <div className="col-md-3"></div>
                     </div>
