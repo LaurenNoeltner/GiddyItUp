@@ -38,10 +38,12 @@ router.put("/:id", (req, res) => {
 // });
 
 router.delete("/:id", (req, res) => {
-  db.Task.deleteOne({ _id: req.params.id }).then((result) => {
-    console.log("deleted button" + req.params.id);
-    res.json(result).catch((err) => console.log(err));
-  });
+  db.Task.deleteOne({ _id: req.params.id })
+    .then((result) => {
+      console.log("deleted button" + req.params.id);
+      res.json(result);
+    })
+    .catch((err) => console.log(err));
 });
 
 module.exports = router;

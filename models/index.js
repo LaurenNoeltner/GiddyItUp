@@ -1,6 +1,6 @@
 module.exports = {
-    Parent: require("./Parent"),
-    Child: require("./Child"),
-    Task: require("./Task"),
-    User: require("./User")
-}
+  Parent: require("./parent"),
+  Child: require("./child"),
+  Task: require("./task"),
+  User: require("./user"),
+};
