@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AuthForm = ({ buttonText, handleSubmit, slug }) => {
+const AuthForm = ({ buttonText, buttonSign, handleSubmit, slug }) => {
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
   return (
@@ -34,6 +34,10 @@ const AuthForm = ({ buttonText, handleSubmit, slug }) => {
       <div className="col text-center">
         <button type="submit" className="btn btn-primary">
           {buttonText}
+        </button>
+        |
+        <button type="submit" className="btn btn-primary">
+          {buttonSign}
         </button>
       </div>
     </form>

@@ -16,8 +16,8 @@ class App extends Component {
           <header className="App-header">
             <Header />
             <Switch>
+              <Route exact path="/" component={Login} />
               <Route exact path="/signup" component={SignUp} />
-              <Route exact path="/login" component={Login} />
               <Route exact path="/Saloon" component={Saloon} />
               <Route exact path="/Bounty" component={Bounty} />
               <Route exact path="/ParentBounty" component={ParentBounty} />

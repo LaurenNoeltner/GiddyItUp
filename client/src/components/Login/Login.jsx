@@ -44,6 +44,8 @@ const Login = () => {
             handleSubmit={handleSubmit}
             buttonText="Sign In"
             slug="login"
+            buttonSign="Sign Up"
+            slug="signup"
           />
         </div>
       </div>
