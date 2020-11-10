@@ -1,5 +1,5 @@
 import React from 'react';
-import "./style.css";
+//import "./style.css";
 
 export function Header(props) {
     return (
@@ -17,8 +17,8 @@ export function TextArea(props) {
             <textarea className="form-control" rows="20" {...props} />
         
          
-         <img className="card-img" src={user.image} alt="user thumbnail" />
-          {!user.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}  
+         {/* <img className="card-img" src={user.image} alt="user thumbnail" />
+          {!user.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}   */}
       </div>
     );
 }
@@ -34,4 +34,4 @@ export function AddBtn(props) {
 {/* <div className="card-body">{props.children}</div>
         </div> */}
 
-export default BountyBoard;
+//export default KidBounty;
