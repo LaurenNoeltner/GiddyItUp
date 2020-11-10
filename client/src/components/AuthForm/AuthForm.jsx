@@ -40,6 +40,12 @@ const AuthForm = ({ buttonText, buttonSign, handleSubmit, slug }) => {
           {buttonSign}
         </button>
       </div>
+      <div>
+          <h5>Hold on little fella!</h5>
+          <h6>Do you have permission from your parents?</h6>
+          <h6>If not, go wrangle them up and lets get this started!</h6>
+      </div>
+
     </form>
   );
 };

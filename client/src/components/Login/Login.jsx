@@ -33,8 +33,8 @@ const Login = () => {
     <div className="container">
       <div className="row">
         <div className="col text-center">
-          <h1>Welcome Back!</h1>
-          <h3>Sign in below</h3>
+          <h1>Howdy Partner!</h1>
+          <h3>Go on and check in below</h3>
         </div>
       </div>
       <div className="row">

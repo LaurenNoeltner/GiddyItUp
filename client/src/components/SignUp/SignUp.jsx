@@ -15,7 +15,7 @@ const SignUp = () => {
       .then((response) => {
         console.log(response.data);
         setJwt(response.data.data);
-        history.push("/books");
+        history.push("/");
       })
       .catch((err) => {
         console.log(err);
