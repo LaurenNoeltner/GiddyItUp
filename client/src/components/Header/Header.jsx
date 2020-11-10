@@ -9,10 +9,10 @@ class Header extends Component {
             <div>
                 <div>
                     <Navbar expand="lg" variant="light" bg="light">
-                        <h2 id="navbarLogo" href="/">GiddyItUp</h2>
-                        <div className="headBtn"><NavLink id="headBtn" to="/Saloon"  activeClassName="selected">Saloon</NavLink></div>
-                        <div className="headBtn"><NavLink id="headBtn" to="/Bounty" activeClassName="selected">Bounty Board</NavLink></div> 
-                        <div className="headBtn"><NavLink id="headBtn" to="/ParentBounty" activeClassName="selected">Sheriff's Bounty Board</NavLink></div> 
+                        <h1 id="navbarLogo" href="/">GiddyItUp</h1>
+                        <div className="ml-3 headBtn"><NavLink id="headBtn" to="/Saloon"  activeClassName="selected">Saloon</NavLink></div>
+                        <div className="ml-3 headBtn"><NavLink id="headBtn" to="/Bounty" activeClassName="selected">Bounty Board</NavLink></div> 
+                        <div className="ml-3 headBtn"><NavLink id="headBtn" to="/ParentBounty" activeClassName="selected">Sheriff's Bounty Board</NavLink></div> 
                     </Navbar>
                 </div>
             </div>
