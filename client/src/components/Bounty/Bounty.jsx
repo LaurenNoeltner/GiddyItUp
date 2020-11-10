@@ -18,7 +18,7 @@ function Bounty() {
     
         return (
             <>
-            
+           
             <div className="row" >
                 <div className="col-md-4"></div>
                 <div id="boardTitle"className="col-md-3">Bounty Board</div>
@@ -40,7 +40,7 @@ function Bounty() {
                 </div>
                 <div className="col-md-2"></div>
             </div>
-              
+            
             </>  
         );
     }
