@@ -22,7 +22,7 @@ const Login = () => {
       .then((response) => {
         console.log(response.data);
         setJwt(response.data.data);
-        history.push("/books");
+        history.push("/Saloon");
       })
       .catch((err) => {
         console.log(err);
