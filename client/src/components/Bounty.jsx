@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import "./Bounty.css";
+import BountyBoard from './BountyBoard';
+import { TextArea } from './BountyBoard.js';
+
+
 
 class Bounty extends Component {
     render() {
         return (
             <>
+            < Header />
             <div className="row" >
                 <div className="col-md-4"></div>
                 <div id="boardTitle"className="col-md-3">Bounty Board</div>
                 <div className="col-md-4"></div>
             </div>
+            < TextArea />
             <div className="row">
                 <div className="col-md-2"></div>
                 <div className="bountyContainer col-md-8">
