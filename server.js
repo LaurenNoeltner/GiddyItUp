@@ -11,6 +11,7 @@ const ParentController = require("./controllers/parentController");
 const ChildController = require("./controllers/childController");
 const TaskController = require("./controllers/taskController");
 const AuthController = require("./controllers/authController");
+const UserController = require("./controllers/userController");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -45,6 +46,7 @@ app.use("/api/auth", AuthController);
 app.use("/api/parent", ParentController);
 app.use("/api/child", ChildController);
 app.use("/api/tasks", TaskController);
+app.use("/api/user", UserController);
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));

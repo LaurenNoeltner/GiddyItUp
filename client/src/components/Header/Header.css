@@ -1,0 +1,21 @@
+#navbarLogo {
+  font-family: "Smokum", cursive;
+  font-size: 35px;
+  font-weight: 700;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: rgb(197, 168, 87);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#headBtn {
+  margin: 10px;
+  color: chocolate;
+  font-family: "Smokum", cursive;
+  font-size: 25px;
+  font-weight: 700;
+  color: black;
+  align-self: right;
+}
