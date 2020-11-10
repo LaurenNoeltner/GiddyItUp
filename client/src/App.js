@@ -1,10 +1,10 @@
 import Header from "./components/Header";
-import Bounty from "./components//Bounty/Bounty";
+import Bounty from "./components/Bounty/Bounty";
 import Saloon from "./components/Saloon";
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ParentBounty from "./components/ParentBounty";
+import ParentBounty from "./components/ParentBounty/ParentBounty";
 
 class App extends Component {
   render() {
