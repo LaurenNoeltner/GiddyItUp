@@ -17,8 +17,8 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  db.Task.create(req.body).then((saveTask) => {
-    res.json(saveTask);
+  db.Task.create(req.body).then((newTask) => {
+    res.json(newTask);
   });
 });
 

@@ -7,9 +7,16 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
+<<<<<<< HEAD
+const ParentController = require ("./controllers/parentController");
+const ChildController = require ("./controllers/childController");
+const TaskController = require ("./controllers/taskController");
+const AuthController = require ("./controllers/authController");
+=======
 const ParentController = require("./controllers/parentController");
 const ChildController = require("./controllers/childController");
 const TaskController = require("./controllers/taskController");
+>>>>>>> cfa937f18edc97b32e171f6d27b13e846bb876f8
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -40,9 +47,11 @@ app.get("/api/config", (req, res) => {
   });
 });
 
+app.use(AuthController);
 app.use("/api/parent", ParentController);
 app.use("/api/child", ChildController);
 app.use("/api/tasks", TaskController);
+
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
