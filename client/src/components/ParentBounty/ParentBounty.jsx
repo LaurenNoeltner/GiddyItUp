@@ -76,7 +76,7 @@ function ParentBounty() {
                     {tasks.map(task => (
                         <>
                         <div key={task.identifier} className="taskContainer col-md-3">
-                            {task.name} | Reward: {task.points}
+                            {task.task} | Reward: {task.points}
                         </div>
                         </>
                     ))}    
