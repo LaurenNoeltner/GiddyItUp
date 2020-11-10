@@ -1,0 +1,20 @@
+h2 {
+    color:black;
+}
+
+.list-group {
+    color: tan;
+}
+
+.edit-btn {
+    color: orange;
+}
+
+.form-group {
+    color: tan;
+}
+
+.add-btn {
+    color: red;
+    float: right;
+}
