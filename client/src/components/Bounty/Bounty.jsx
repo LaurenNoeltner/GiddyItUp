@@ -1,13 +1,8 @@
 import React, { Component, useState, useEffect } from 'react';
-import Header from "../Header";
-import ParentBounty from "../ParentBounty/ParentBounty";
+import Header from "../Header/Header";
+// import ParentBounty from "../ParentBounty/ParentBounty";
 import "./Bounty.css";
 import API from "../utils/API"
-
-
-
-    
-    
 
 
 
@@ -87,7 +82,7 @@ function Bounty() {
               
             </>  
         );
-    }
+}
 
 
 export default Bounty;

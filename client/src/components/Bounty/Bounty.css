@@ -5,7 +5,9 @@
   border-style: solid;
   border-width: 2px;
   border-color: chocolate;
-  font-family: fantasy;
+  font-family: "Smokum", cursive;
+  font-size: 35px;
+  font-weight: 700;
 }
 
 .bountyContainer {

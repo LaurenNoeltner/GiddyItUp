@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Bounty from "./components/Bounty/Bounty";
 import Saloon from "./components/Saloon";
 import React, { Component } from "react";
