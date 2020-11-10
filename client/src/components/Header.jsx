@@ -12,7 +12,7 @@ class Header extends Component {
                         <Navbar.Brand href="#">GiddyItUp</Navbar.Brand>
                         <div className="headBtn"><NavLink to="/Saloon"  activeClassName="selected">Saloon</NavLink></div>
                         <div className="headBtn"><NavLink to="/Bounty" activeClassName="selected">Bounty Board</NavLink></div> 
-                        <div className="headBtn"><NavLink to="/ParentBounty" activeClassName="selected">Sherrif's Bounty Board</NavLink></div> 
+                        <div className="headBtn"><NavLink to="/ParentBounty" activeClassName="selected">Sheriff's Bounty Board</NavLink></div> 
                     </Navbar>
                 </div>
             </div>
