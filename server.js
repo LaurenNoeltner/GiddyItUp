@@ -41,11 +41,10 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-app.use(AuthController);
+app.use("/api/auth", AuthController);
 app.use("/api/parent", ParentController);
 app.use("/api/child", ChildController);
 app.use("/api/tasks", TaskController);
-
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
