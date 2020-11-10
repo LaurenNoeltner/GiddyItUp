@@ -76,7 +76,13 @@ function ParentBounty() {
                     {tasks.map(task => (
                         <>
                         <div key={task.identifier} className="taskContainer col-md-3">
-                            {task.task} | Reward: {task.points}
+                            <div>
+                                {task.task} | Reward: {task.points}
+                            </div>
+                            <hr />
+                            <div>
+                                {task.location} | {task.description}
+                            </div>
                         </div>
                         </>
                     ))}    
@@ -108,7 +114,7 @@ function ParentBounty() {
                         <div id="formBox" className="col-md-5">
                             <label>Location</label>
                             {/* //add name and onChange={handleInputChange} for each input */}
-                            <input name="location" id="locationInput" placeholder="Where?..." required></input>
+                            <input name="location" onChange={handleInputChange} id="locationInput" placeholder="Where?..." required></input>
                         </div>
                         <div className="col-md-3"></div>
                     </div>
@@ -116,7 +122,7 @@ function ParentBounty() {
                         <div className="col-md-3"></div>
                         <div id="formBox" className="col-md-5">
                             <label>Description</label>
-                            <input name="description" id="descriptionInput" placeholder="Describe the task..." required></input>
+                            <input name="description" onChange={handleInputChange} id="descriptionInput" placeholder="Describe the task..." required></input>
                         </div>
                         <div className="col-md-3"></div>
                     </div>
@@ -124,7 +130,7 @@ function ParentBounty() {
                         <div className="col-md-3"></div>
                         <div id="formBox" className="col-md-5">
                             <label>Reward</label>
-                            <input name ="points" id="rewardInput" placeholder="Silver Points..." required></input>
+                            <input name ="points" onChange={handleInputChange} id="rewardInput" placeholder="Silver Points..." required></input>
                         </div>
                         <div className="col-md-3"></div>
                     </div>
