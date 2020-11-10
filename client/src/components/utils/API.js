@@ -6,7 +6,7 @@ export default {
     return axios.get("/api/tasks");
   },
   // Gets the tasks with the given id
-  getTask: function (id) {
+  getTaskById: function (id) {
     return axios.get("/api/tasks/" + id);
   },
   // Deletes the task with the given id
