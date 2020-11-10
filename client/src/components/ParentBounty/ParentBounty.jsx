@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import { NavLink } from "react-router-dom";
 import "./ParentBounty.css";
-// import router from "../../../../controllers/taskController";
+import API from "../utils/API";
 
 
 // Make these functions: V V
@@ -28,7 +28,7 @@ function ParentBounty() {
 
     //load all tasks and sets them to tasks
     function loadTasks () {
-        router.getTasks()
+        API.getTasks()
             .then(res =>
                 setTasks(res.data)
             )
@@ -46,11 +46,11 @@ function ParentBounty() {
     function handleFormSubmit(event) {
         event.preventDefault();
         if (formObject.task && formObject.points) {
-            router.saveTask({
-                taskName: formObject.task,
+            API.saveTask({
+                task: formObject.task,
                 location: formObject.location,
                 description: formObject.description,
-                reward: formObject.points
+                points: formObject.points
             })
                 .then(res => loadTasks())
                 .catch(err => console.log(err));
