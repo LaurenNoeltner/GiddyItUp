@@ -3,19 +3,6 @@ import React, { useState, useEffect } from 'react';
 import "./ParentBounty.css";
 import API from "../utils/API";
 
-
-// Make these functions: V V
-// handleInputChange
-// handleFormSubmit
-// handle Click
-
-
-
-
-//note:
-//add name attr and handleInputChange to all inputs
-//add handleClick to submit button
-
 function ParentBounty() {
     //set component init state
     const [tasks, setTasks] = useState([]);
@@ -113,7 +100,6 @@ function ParentBounty() {
                         <div className="col-md-3"></div>
                         <div id="formBox" className="col-md-5">
                             <label>Location</label>
-                            {/* //add name and onChange={handleInputChange} for each input */}
                             <input name="location" onChange={handleInputChange} id="locationInput" placeholder="Where?..." required></input>
                         </div>
                         <div className="col-md-3"></div>
