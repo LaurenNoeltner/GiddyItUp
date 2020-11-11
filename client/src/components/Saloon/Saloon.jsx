@@ -6,22 +6,16 @@ import DeputyTwo from '../../images/DeputyBoy.png';
 import DeputyThree from '../../images/DeputyFemale.png';
 import DeputyFour from '../../images/DeputyMask.png';
 import Sheriff from '../../images/SheriffMom.png';
-
 class Saloon extends Component {
     render() {
         return (
-
             <div className="bg-img">
-
                 <div className="row saloon-card"></div>
                 <div className="row">
-                    
                     <div className="col-1"></div>
-                    
                     <div className="card col-3 deputy-card ">
                         <div className="card-body">
                             <h5 className="card-title">DEPUTY</h5>
-
                             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="false">
                                 <ol className="carousel-indicators">
                                     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
@@ -53,19 +47,13 @@ class Saloon extends Component {
                                 </a>
                             </div>
                             <div className="board-link"><NavLink to="/Bounty" activeClassName="selected" >Bounty Board</NavLink></div>
-
                         </div>
                     </div>
-
                     <div className="col-4">
-
                     </div>
-
                     <div className="card col-3 sheriff-card">
-
                         <div className="card-body">
                             <h5 className="card-title">SHERIFF</h5>
-
                             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                                 <ol className="carousel-indicators">
                                     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
@@ -74,29 +62,16 @@ class Saloon extends Component {
                                     <div className="carousel-item active">
                                         <img src={Sheriff} alt="Sheriff" width="150" height="200" />
                                     </div>
-
                                 </div>
-
                             </div>
                             <div className="board-link"><NavLink to="/ParentBounty" activeClassName="selected" id="board-link">Sheriff's Board</NavLink></div>
-
-
                         </div>
-
                     </div>
-                    
                     <div className="col-1">
-
                     </div>
-
                 </div>
-
-
             </div>
-
-
         );
     }
 }
-
 export default Saloon;
