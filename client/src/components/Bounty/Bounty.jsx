@@ -2,7 +2,8 @@ import React, { Component, useState, useEffect } from 'react';
 import Header from "../Header/Header";
 // import ParentBounty from "../ParentBounty/ParentBounty";
 import "./Bounty.css";
-import API from "../utils/API"
+import API from "../utils/API";
+import westernbackgroundimage3 from "../../images/westernbackgroundimage3.jpg";
 
 
 
@@ -51,7 +52,8 @@ function Bounty() {
         }
         return (
             <>
-           
+            
+            {/* <img src={westernbackgroundimage3} className={"backgroundimage"} alt="westernbackground" /> */}
             <div className="row" >
                 <div className="col-md-4"></div>
                 <div id="boardTitle" className="col-md-3">Bounty Board</div>
@@ -80,6 +82,7 @@ function Bounty() {
                 <div className="col-md-2"></div>
             </div>
             
+
             </>  
         );
 }
