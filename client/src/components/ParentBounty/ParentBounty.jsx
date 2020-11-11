@@ -87,7 +87,7 @@ function ParentBounty() {
                   <hr />
                   <div>
                     {task.location} | {task.description}
-                    <button onClick={() => deleteTask(task._id)}>
+                    <button className="delete-task" onClick={() => deleteTask(task._id)}>
                       <svg
                         width="1em"
                         height="1em"
