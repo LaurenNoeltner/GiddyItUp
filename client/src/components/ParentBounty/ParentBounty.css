@@ -17,4 +17,7 @@ label {
   margin-left: 5px;
   border-color: maroon;
   background-color: sandybrown;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
