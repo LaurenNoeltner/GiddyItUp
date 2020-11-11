@@ -1,6 +1,6 @@
 import Header from "./components/Header/Header";
 import Bounty from "./components/Bounty/Bounty";
-import Saloon from "./components/Saloon";
+import Saloon from "./components/Saloon/Saloon";
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
