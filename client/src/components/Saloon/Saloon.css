@@ -1,14 +1,15 @@
-.bg-img {
+/* .bg-img {
   background-image: url("../../images/BgSaloon.png");
   background-size: cover;
   background-attachment: scroll;
   background-repeat: no-repeat;
-}
+} */
 .card {
   background-image: url("../../images/BgWanted.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 750px;
+  height: 765px;
+  width: 350px;
   margin-bottom: 220px;
 }
 .carousel-item {
@@ -29,10 +30,12 @@
   margin: 10px;
   color: chocolate;
   font-family: "Smokum", cursive;
-  font-size: 35px;
+  text-shadow: #0e0d0d 0px 0px 5px;
+  font-size: 40px;
   font-weight: 700;
   color: black;
   text-align: center;
+  margin-top: 15px;
 }
 .board-link {
   font-family: "Smokum", cursive;
@@ -42,4 +45,20 @@
   text-align: center;
   animation: lightSpeedInRight; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+ margin-top: 180px;
+}
+.carousel-control-prev-icon:after {
+    margin-bottom: 30px;
+    content: '<';
+    font-size: 35px;
+    color: #000000;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 35px;
+  color: #000000;
 }

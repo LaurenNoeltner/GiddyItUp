@@ -2,7 +2,7 @@ import API from "../utils/ChildAPI";
 import { useState, useEffect } from "react";
 
 function NewChild() {
-  const [child, setChild] = useState([]);
+  const [children, setChild] = useState([]);
   const [childObject, setChildObject] = useState({});
 
   useEffect(() => {
@@ -19,9 +19,9 @@ function NewChild() {
   }
 
   function deleteChild(id) {
-    API.deleteChild(id).then((res) =>
-      loadChild().catch((err) => console.log(err))
-    );
+    API.deleteChild(id)
+      .then((res) => loadChild())
+      .catch((err) => console.log(err));
   }
 
   function handleInputChange(event) {
@@ -56,15 +56,14 @@ function NewChild() {
         <div className="col-md-2"></div>
         <div className="bountyContainer col-md-8">
           <div className="row" id="row1">
-            {child.map((child) => (
+            {children.map((child) => (
               <>
-                <div key={child.identifier} className="taskContainer col-md-3">
+                <div key={child._id} className="taskContainer col-md-3">
                   <div>
-                    {child.firstName} | {child.lastName}
+                    {child.firstName} {child.lastName} {child.age}
                   </div>
                   <hr />
                   <div>
-                    {child.age}
                     <button onClick={() => deleteChild(child._id)}>
                       <svg
                         width="1em"
@@ -91,24 +90,36 @@ function NewChild() {
 
       <form>
         <div className="form-group">
-          <label>Add Deputy</label>
+          <label>Add First Name</label>
           <input
-            name="childName"
+            name="firstName"
             onChange={handleInputChange}
             type="text"
             className="form-control"
-            id="childInput"
-            placeholder="Add deputy"
+            id="childFirstName"
+            placeholder="Add first name"
+          ></input>
+        </div>
+        <div className="form-group">
+          <label>Last Name</label>
+          <input
+            name="lastName"
+            onChange={handleInputChange}
+            type="text"
+            className="form-control"
+            id="childLastName"
+            placeholder="Add deputy's first name"
           ></input>
         </div>
         <div className="form-group">
           <label>Age</label>
           <input
             name="age"
+            onChange={handleInputChange}
             type="text"
             className="form-control"
             id="childAge"
-            placeholder="Input Child's Age"
+            placeholder="Add deputy's last name"
           ></input>
         </div>
         <button

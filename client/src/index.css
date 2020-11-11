@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    font-family: sans-serif;
+    min-height: 95vh;
+    background-image: url(../src/images/BgSaloon.png);
+    background-size: cover;
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+  }
+  /* body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../src/images/BgSaloon.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  } */
