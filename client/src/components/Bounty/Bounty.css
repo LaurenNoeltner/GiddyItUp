@@ -57,3 +57,7 @@
 .container {
   height: 1000px;
 }
+
+.spacer {
+  margin-top: 20px;
+}
