@@ -1,0 +1,45 @@
+.bg-img {
+  background-image: url("../../images/BgSaloon.png");
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+}
+.card {
+  background-image: url("../../images/BgWanted.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 750px;
+  margin-bottom: 220px;
+}
+.carousel-item {
+  margin-top: 180px;
+  margin-left: 140px;
+}
+.col-3 {
+  margin-top: 350px;
+}
+.saloon-card {
+  margin-bottom: 120px;
+}
+.deputy-card {
+  width: "150";
+  height: "200";
+}
+.card-title {
+  margin: 10px;
+  color: chocolate;
+  font-family: "Smokum", cursive;
+  font-size: 35px;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+}
+.board-link {
+  font-family: "Smokum", cursive;
+  font-size: 35px;
+  /* color: rgb(187, 39, 39) !important; */
+  text-shadow: #10a74a 0px 0px 20px;
+  text-align: center;
+  animation: lightSpeedInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+}
