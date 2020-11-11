@@ -68,7 +68,8 @@ function ParentBounty() {
 
         return (
             <>
-            <div className=" board-row row" >
+            <div className="spacer row"></div>
+            <div className="board-row row" >
                 <div className="col-md-3"></div>
                 <div id="boardTitle" className="col-md-5">
                     Bounty Board
