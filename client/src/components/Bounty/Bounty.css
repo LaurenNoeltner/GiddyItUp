@@ -18,6 +18,8 @@
   padding: 10px;
   margin: 10px;
   background-color: burlywood;
+  margin-top: 70px;
+  
 }
 
 .taskContainer {
@@ -29,10 +31,21 @@
   margin-left: 15px;
   text-align: center;
 }
+.bounty-page {
+  margin-top: 250px;
+  /* min-height: 1000px; */
+}
 
+.bounty-board {
+  margin-bottom: 70px;
+}
+/* .bounty-container {
+  margin-bottom: 300px;
 
-
-
-
-
-
+} */
+.bounty-space {
+  margin-bottom: 300px;
+}
+.container {
+  height: 1000px
+}
