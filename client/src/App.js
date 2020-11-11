@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ParentBounty from "./components/ParentBounty/ParentBounty";
 import SignUp from "./components/SignUp/SignUp";
 import Login from "./components/Login/Login";
+import NewChild from "./components/NewChild/NewChild";
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
               <Route exact path="/Saloon" component={Saloon} />
               <Route exact path="/Bounty" component={Bounty} />
               <Route exact path="/ParentBounty" component={ParentBounty} />
+              <Route exact path="/NewChild" component={NewChild} />
             </Switch>
           </header>
         </div>
