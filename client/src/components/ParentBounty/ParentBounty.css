@@ -1,0 +1,20 @@
+#formTitle,
+#formBox {
+  background-color: rgba(12, 12, 12, 0.497);
+  color: white;
+}
+
+#formTitle {
+  font-size: 25px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+.delete-task {
+  color: black;
+  margin-left: 5px;
+  border-color: maroon;
+  background-color: sandybrown;
+}

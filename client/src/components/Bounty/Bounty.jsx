@@ -61,9 +61,11 @@ function Bounty() {
         <div className="bounty-page">
         <div className="container">
                 <div className="row" >
-                    <div className="col-md-4"></div>
-                    <div id="boardTitle" className="col-md-3">Bounty Board</div>
-                    <div className="col-md-4 "></div>
+                    <div className="col-md-3"></div>
+                    <div id="boardTitle" className="col-md-5">Bounty Board</div>
+                    <div className="col-md-3 ">
+    <h3 id="Points">Points: $ {tasks.points}</h3>
+                    </div>
                 </div>
 
                 <div className="row bounty-container">

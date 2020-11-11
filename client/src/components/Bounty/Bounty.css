@@ -1,14 +1,23 @@
 #boardTitle {
-  text-align: center;
+  align-content: center;
   font-size: larger;
-  background-color: peru;
-  border-style: solid;
+  text-align: center;
+  /* background-color: peru; */
+  /* border-style: solid;
   border-width: 2px;
-  border-color: chocolate;
+  border-color: chocolate; */
   font-family: "Smokum", cursive;
   font-size: 35px;
   font-weight: 700;
   border-radius: 5px;
+  background: url("../../images/1aaasilverwinggfairy005.png") no-repeat;
+  background-size: 100%;
+  background-position: center;
+  height: 60px;
+}
+
+.board-row {
+  height: 60px;
 }
 
 .bountyContainer {
@@ -19,7 +28,6 @@
   margin: 10px;
   background-color: burlywood;
   margin-top: 70px;
-  
 }
 
 .taskContainer {
@@ -47,5 +55,5 @@
   margin-bottom: 300px;
 }
 .container {
-  height: 1000px
+  height: 1000px;
 }
