@@ -3,6 +3,10 @@
   background-color: rgba(12, 12, 12, 0.497);
   color: white;
 }
+#addTask {
+  margin: 5px;
+  align-content: center;
+}
 
 #formTitle {
   font-size: 25px;
@@ -15,6 +19,11 @@ label {
 .delete-task {
   color: black;
   margin-left: 5px;
-  border-color: maroon;
-  background-color: sandybrown;
+  border-color: rgb(78, 60, 27);
+  border-width: 1px;
+  border-radius: 5px;
+  background-color: rgba(244, 165, 96, 0.299);
+  position: absolute;
+  top: 0;
+  right: 0;
 }
