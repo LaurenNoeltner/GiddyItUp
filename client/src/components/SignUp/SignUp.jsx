@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import API from "../utils/UserAPI";
 // import AuthForm from "../AuthForm/AuthForm";
 import { Link, useHistory } from "react-router-dom";
+import "./SignUp.css"
 
 const SignUp = () => {
   const [state, setState] = useState({
@@ -72,23 +73,15 @@ const SignUp = () => {
   };
 
   return (
-    // <div className="container">
-    //   <div className="row">
-    //     <div className="col-sm-3"></div>
-    //     <div className="col-sm-6">
-    //       <AuthForm
-    //         handleSubmit={handleSubmit}
-    //         buttonText="Create Account"
-    //         slug="signup"
-    //       />
-    //     </div>
-    //   </div>
-    // </div>
-    <main className="content">
-      <div className="container sign-in-container">
+    <div className="container">
+      <div className="row login-jumbotron">
+        <br />
+        <br />
+      </div>
+      <div className="jumbotron">
         <section className="row">
           <div className="col-sm-12">
-            <h1>Sign up</h1>
+            <h1 className="welcome text-center">Sign up</h1>
           </div>
         </section>
         <section className="row">
@@ -96,7 +89,7 @@ const SignUp = () => {
             <form
               onSubmit={handleSubmit}>
               <div className="form-group">
-              <input
+                <input
                   value={state.firstName}
                   name="firstName"
                   type="text"
@@ -108,7 +101,7 @@ const SignUp = () => {
                 />
               </div>
               <div className="form-group">
-              <input
+                <input
                   value={state.lastName}
                   name="lastName"
                   type="text"
@@ -117,6 +110,18 @@ const SignUp = () => {
                   id="enterLastName"
                   aria-describedby="emailHelp"
                   placeholder="Last Name"
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  value={state.email}
+                  name="email"
+                  type="email"
+                  //only accepts a formatted date
+                  className="form-control sign-in-input"
+                  onChange={handleInputChange}
+                  id="userEmail"
+                  placeholder="Email Address"
                 />
               </div>
               <div className="form-group">
@@ -142,30 +147,29 @@ const SignUp = () => {
                   placeholder="Confirm Password"
                 />
               </div>
-              <div className="form-group">
-                <input
-                  value={state.email}
-                  name="email"
-                  type="email"
-                  //only accepts a formatted date
-                  className="form-control sign-in-input"
-                  onChange={handleInputChange}
-                  id="userEmail"
-                  placeholder="Email Address"
-                />
-              </div>
-              <Link
-                type="submit"
-                className="btn btn-primary button sign-in-btn"
-                to="/"
-              >
-                Confirm Account
+              <br/>
+              <div className="row create-acct">
+                <div className="col text-center">
+                <Link
+                  type="submit"
+                  className="btn btn-primary btn-lg button sign-in-btn create-acct-btn"
+                  to="/"
+                >
+                  CREATE ACCOUNT
               </Link>
+                </div>
+               
+              </div>
+
             </form>
           </div>
         </section>
+
+
       </div>
-    </main>
+
+    </div>
+
   );
 };
 

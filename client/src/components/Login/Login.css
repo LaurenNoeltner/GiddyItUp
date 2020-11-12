@@ -10,7 +10,7 @@
   border-radius: 40px;
   margin: 0 auto;
 }
-.welcome {
+.welcome-back {
   font-family: "Smokum", cursive;
   font-size: 50px;
   font-weight: 500;
@@ -50,9 +50,9 @@ label {
     border-color: #810020;
     display: inline-block;
     font-weight: 400;
-    width: 100px;
+    width: 110px;
     padding: 8px 0px;
-    margin-left: 10px
+    margin-left: 6px
 }
 button:hover{
     background-color: #772111 !important;
