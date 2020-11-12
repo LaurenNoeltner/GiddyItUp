@@ -91,7 +91,6 @@ function ParentBounty(props) {
   return (
     <>
     <div className="bounty-page">
-    <div className="container"></div>
         <div className="row">
             <div className="col-md-3"></div>
             <div id="boardTitle" className="col-md-5">
