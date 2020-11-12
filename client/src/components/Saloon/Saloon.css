@@ -56,9 +56,17 @@
     font-size: 35px;
     color: #000000;
 }
-.carousel-control-next-icon:after
-{
+.carousel-control-next-icon:after {
   content: '>';
   font-size: 35px;
   color: #000000;
+}
+.carousel .carousel-indicators li {
+  background-color: #fff;
+  background-color: rgba(70, 70, 70, 0.25);
+  margin-bottom: 200px;
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #444;
 }
