@@ -10,7 +10,7 @@ const app = express();
 const ParentController = require("./controllers/parentController");
 const ChildController = require("./controllers/childController");
 const TaskController = require("./controllers/taskController");
-const AuthController = require("./controllers/authController");
+// const AuthController = require("./controllers/authController");
 const UserController = require("./controllers/userController");
 
 app.use(express.urlencoded({ extended: true }));
@@ -42,7 +42,7 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-app.use("/api/auth", AuthController);
+// app.use("/api/auth", AuthController);
 app.use("/api/parent", ParentController);
 app.use("/api/child", ChildController);
 app.use("/api/tasks", TaskController);

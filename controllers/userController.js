@@ -1,45 +1,118 @@
 const express = require("express");
-const router = express.Router();
 const db = require("../models");
 
-// TODO: Build an authentication/authorization controller.
+const router = express.Router();
 
-router.get("/", (req, res) => {
-    // TODO: Restrict which fields are returned. NO PASSWORD!
-  db.User.find({})
-    .populate("books")
-    .then((foundUsers) => {
-      res.json(foundUsers);
-    });
+router.get("/user", (req, res) => {
+  db.User.find({}).then((allUser) => {
+    console.log(allUser);
+    res.json({ allUser: allUser });
+  }).catch(error => {
+    console.log(error)
+  })
 });
 
 router.get("/:id", (req, res) => {
-    // TODO: Restrict which fields are returned. NO PASSWORD!
-  db.User.find({ _id: req.params.id }).then((foundUser) => {
-    res.json(foundUser);
+  console.log(req.params.id);
+  console.log(typeof req.params.id);
+  if (!req.params.id || req.params.id === "null" || req.params.id === "undefined") {
+    return res.status(500).json({
+      error: true,
+      data: null,
+      message: "no id provided.",
+    });
+    
+  }
+  db.User.findById(req.params.id)
+    .then((foundUser) => {
+      console.log(foundUser);
+      res.json({
+        error: false,
+        data: foundUser,
+        message: "Successfully found user.",
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({
+        error: true,
+        data: null,
+        message: "there has been an error.",
+      });
+    });
+});
+
+router.post("/sign-up", (req, res) => {
+  const newUser = (req.body);
+  db.User.create(newUser).then((newUser) => {
+    res.json({
+      error: false,
+      data: newUser,
+      message: "Successfully created user.",
+    });
   });
 });
 
-router.post("/", (req, res) => {
-  db.User.create(req.body).then((newUser) => {
-    res.json(newUser);
-  });
-});
-
-router.put("/:id", (req, res) => {
-    // TODO: Restrict which fields are editable
-  db.User.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(
-    (updatedUser) => {
-      res.json(updatedUser);
+router.post("/login", (req, res) => {
+  console.log(req.body);
+  db.User.findOne({email:req.body.email}).then((foundUser) => {
+    if (foundUser.password === req.body.password){
+      // res.json(foundUser);
+      const token = jwt.sign({ data: foundUser }, secret, { expiresIn: expiration });
+      res.json({
+        error: false,
+        data: {foundUser, token},
+        message: "Successfully logged in user.",
+      });
+      console.log(token);
     }
-  );
+    else {
+      res.status(401).json("User not authorized");
+    }
+  });
+});
+// the total route /api/user/:id
+router.put("/:id", (req, res) => {
+  db.User.findByIdAndUpdate(req.params.id,
+    req.body, {new: true})
+    .then((updatedUser) => {
+      console.log(updatedUser);
+      res.json({
+        error: false,
+        data: updatedUser,
+        message: "Successfully updated profile.",
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({
+        error: true,
+        data: null,
+        message: "Unable to update profile.",
+      });
+    });
 });
 
+// Delete route works now.
+// the total route /api/user/:id
 router.delete("/:id", (req, res) => {
-    // TODO: Figure out how to restrict account deletion.
-  db.User.findByIdAndDelete(req.params.id).then((result) => {
-    res.json(result);
-  });
+  db.User.findByIdAndDelete({ _id: req.params.id})
+    .then((deletedUser) => {
+      console.log(deletedUser);
+      res.json({
+        error: false,
+        data: deletedUser,
+        message: "Successfully deleted profile.",
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({
+        error: true,
+        data: null,
+        message: "Unable to delete profile.",
+      });
+    });
 });
 
 module.exports = router;
