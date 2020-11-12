@@ -28,9 +28,7 @@
   margin: 10px;
   background: url("../../images/cork-board.png");
   margin-top: 70px;
-
   border-image: url("../../images/dark_wood.png") 25 25 round;
-  border-radius: 5px;
 }
 
 .taskContainer {
