@@ -58,7 +58,7 @@ const SignUp = () => {
       .then((response) => {
         sessionStorage.setItem("currentUsers", response.data.data._id);
         //using the useHistory hook to redirect without refreshing
-        history.push("/NewChild");
+        history.push("/login");
       })
       .catch((err) => {
         throw err;
@@ -154,9 +154,13 @@ const SignUp = () => {
                   placeholder="Email Address"
                 />
               </div>
-              <button type="submit" className="btn btn-primary button">
-                Create Account
-              </button>
+              <Link
+                type="submit"
+                className="btn btn-primary button sign-in-btn"
+                to="/"
+              >
+                Confirm Account
+              </Link>
             </form>
           </div>
         </section>
