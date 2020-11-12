@@ -1,0 +1,12 @@
+.welcome {
+    font-family: "Smokum", cursive;
+    font-size: 70px;
+    font-weight: 500;
+    text-shadow: white 0px 0px 20px;
+    animation: zoomInDown; 
+    animation-duration: 2s; 
+    margin-bottom: 30px;
+  }
+.create-acct-btn {
+    width: 220px!important;
+}
