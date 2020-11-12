@@ -125,13 +125,13 @@ const Login = () => {
               />
             </div>
             <div id="sign-in-btns">
-              <button
+              <Link
                 type="submit"
                 className="btn btn-primary button sign-in-btn"
-                onClick={handleSubmit}
+                to="/NewChild"
               >
                 Login
-              </button>
+              </Link>
               &nbsp;
               <Link
                 type="submit"
