@@ -3,6 +3,10 @@
   background-color: rgba(12, 12, 12, 0.497);
   color: white;
 }
+#addTask {
+  margin: 5px;
+  align-content: center;
+}
 
 #formTitle {
   font-size: 25px;
