@@ -25,12 +25,22 @@ function ParentBounty() {
       .catch((err) => console.log(err));
   }
 
-  // Deletes a book from the database with a given id, then reloads books from the db
-  function deleteTask(id) {
-    API.deleteTask(id)
-      .then((res) => loadTasks())
-      .catch((err) => console.log(err));
-  }
+    // Deletes a book from the database with a given id, then reloads books from the db
+    function deleteTask(id) {
+        API.deleteTask(id)
+        .then(res => loadTasks())
+        .catch(err => console.log(err));
+        
+    }
+    // TODO:  modify to make points increment every time
+
+    // function confirmTask(id) {
+    //     const currentPoints = 
+    //     API.deleteTask(id)
+    //     .then(res => loadTasks())
+    //     .catch(err => console.log(err));
+        
+    // }
 
   //handles updating component state when user types into input field
   function handleInputChange(event) {
@@ -77,7 +87,7 @@ function ParentBounty() {
                   <hr />
                   <div>
                     {task.location} | {task.description}
-                    <button onClick={() => deleteTask(task._id)}>
+                    <button className="delete-task" onClick={() => deleteTask(task._id)}>
                       <svg
                         width="1em"
                         height="1em"
