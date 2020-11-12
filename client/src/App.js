@@ -10,6 +10,13 @@ import Login from "./components/Login/Login";
 import NewChild from "./components/NewChild/NewChild";
 
 class App extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     points: 0,
+  //     show: true,
+  //   };
+  // }
   render() {
     return (
       <Router>
