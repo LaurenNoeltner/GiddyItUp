@@ -3,11 +3,20 @@ import React, { useState, useEffect } from "react";
 import "./ParentBounty.css";
 import "../Bounty/Bounty.css";
 import API from "../utils/API";
+// import Counter from "../Counter/Counter";
 
 function ParentBounty() {
-  //set component init state
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         points: 0,
+    //         show: true,
+    //     };
+    // }
+
   const [tasks, setTasks] = useState([]);
   const [formObject, setFormObject] = useState({});
+  
 
   //load all tasks
   useEffect(() => {
@@ -20,27 +29,34 @@ function ParentBounty() {
       .then((res) => {
         console.log(res);
         setTasks(res.data);
-        // setTasks([{name: "Walk dog", points: 5}, {name: "Walk dog", points: 5}, {name: "Walk dog", points: 5}])
       })
       .catch((err) => console.log(err));
   }
 
-    // Deletes a book from the database with a given id, then reloads books from the db
+    // Deletes a task from the database with a given id, then reloads task from the db
     function deleteTask(id) {
         API.deleteTask(id)
         .then(res => loadTasks())
         .catch(err => console.log(err));
         
     }
-    // TODO:  modify to make points increment every time
 
-    // function confirmTask(id) {
-    //     const currentPoints = 
-    //     API.deleteTask(id)
+
+
+    // TODO:  modify to make points increment every time
+    // handleIncrement = (props) => {
+        
+    //     this.setState({ points: this.state.points + props.points })
+    //     API.deleteTask()
     //     .then(res => loadTasks())
     //     .catch(err => console.log(err));
         
     // }
+
+
+
+
+
 
   //handles updating component state when user types into input field
   function handleInputChange(event) {
@@ -67,14 +83,16 @@ function ParentBounty() {
   return (
     <>
       <div className="row">
-        <div className="col-md-4"></div>
-        <div id="boardTitle" className="col-md-3">
+        <div className="col-md-3"></div>
+        <div id="boardTitle" className="col-md-5">
           Bounty Board
         </div>
-        <div className="col-md-4"></div>
+        <div className="col-md-3">
+            {/* <h3 id="Points">${props.points}</h3> */}
+        </div>
       </div>
 
-      <div className="row">
+      <div className="row bounty-container">
         <div className="col-md-2"></div>
         <div className="bountyContainer col-md-8">
           <div className="row" id="row1">
@@ -106,6 +124,11 @@ function ParentBounty() {
                         <em>Place:</em> {task.location} 
                     </div>
                     <div id="notesText"><em>Notes: </em>{task.description}</div>
+                    {/* <button className="check-btn" onClick={props.handleIncrement()}>
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                        </svg>
+                    </button> */}
                 </div>
               </>
             ))}
@@ -114,7 +137,7 @@ function ParentBounty() {
         <div className="col-md-2"></div>
       </div>
 
-      <hr />
+      <br />
       <form className="row addTaskBox">
         <div className="col-md-2"></div>
         <div id="taskForm" className="col-md-7">
