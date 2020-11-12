@@ -38,6 +38,14 @@
   margin: 5px;
   margin-left: 15px;
   text-align: center;
+  border-radius: 5px;
+}
+#taskName {
+  margin: 3px;
+}
+#placeText,
+#notesText {
+  text-align: left;
 }
 .bounty-page {
   margin-top: 250px;
