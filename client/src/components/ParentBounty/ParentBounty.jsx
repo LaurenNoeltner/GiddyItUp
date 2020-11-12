@@ -8,6 +8,7 @@ function ParentBounty() {
   //set component init state
   const [tasks, setTasks] = useState([]);
   const [formObject, setFormObject] = useState({});
+  
 
   //load all tasks
   useEffect(() => {
