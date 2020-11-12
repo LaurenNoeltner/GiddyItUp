@@ -5,13 +5,31 @@ import "../Bounty/Bounty.css";
 import API from "../utils/API";
 import Counter from "../Counter/Counter";
 
+
+const useStateWithLocalStorage = localStorageKey => {
+    const [value, setValue] = React.useState(
+      localStorage.getItem(localStorageKey) || ''
+    );
+    React.useEffect(() => {
+      localStorage.setItem(localStorageKey, value);
+    }, [value]);
+    return [value, setValue];
+  };
+
+
 function ParentBounty(props) {
 
 
   const [tasks, setTasks] = useState([]);
   const [formObject, setFormObject] = useState({});
   const [points, setPoints] = useState(0);
-  
+  ///this block is debatably useful, but not working
+  const [value, setValue] =useStateWithLocalStorage(
+    'points'
+  );
+
+  const onChange = event => setValue(event.target.value);
+  ///// ^^
 
   //load all tasks
   useEffect(() => {
