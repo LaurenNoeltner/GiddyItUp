@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 // import ParentBounty from "../ParentBounty/ParentBounty";
 import "./Bounty.css";
 import API from "../utils/API";
-import westernbackgroundimage3 from "../../images/westernbackgroundimage3.jpg";
+
 
 
 
@@ -64,7 +64,8 @@ function Bounty() {
                     <div className="col-md-3"></div>
                     <div id="boardTitle" className="col-md-5">Bounty Board</div>
                     <div className="col-md-3 ">
-                        <h3 id="Points">Points: ${tasks.points}</h3>
+                    <h3 id="Points">Points: ${tasks.points}</h3>
+                       
                     </div>
                 </div>
 
@@ -76,6 +77,7 @@ function Bounty() {
                                 <>
                                     <div key={task.identifier} className="taskContainer col-md-3">
                                         <div id="taskPoints">Bounty: ${task.points}</div>   
+                                       
                                         <hr />
                                         <div id="taskName">  
                                             <strong>{task.task}</strong>  
