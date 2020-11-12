@@ -17,7 +17,7 @@ const SignUp = () => {
   useEffect(() => {
     const id = sessionStorage.getItem("currentUsers");
     if (id) {
-      history.push("/Saloon");
+      history.push("/signup");
     }
   }, [history]);
 

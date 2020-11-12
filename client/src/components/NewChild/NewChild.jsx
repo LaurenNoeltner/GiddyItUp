@@ -1,5 +1,6 @@
 import API from "../utils/ChildAPI";
 import { useState, useEffect } from "react";
+// import {Link, useParams, useHistory} from "react-router-dom";
 
 function NewChild() {
   const [children, setChild] = useState([]);
