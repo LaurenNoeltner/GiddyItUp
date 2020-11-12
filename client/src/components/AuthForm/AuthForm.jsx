@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./AuthForm.css"
 
 const AuthForm = ({ buttonText, buttonSign, handleSubmit, slug }) => {
   const [emailAddress, setEmailAddress] = useState("");
@@ -21,7 +22,7 @@ const AuthForm = ({ buttonText, buttonSign, handleSubmit, slug }) => {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="signup-password">Password</label>
+        <label className="enter-password" htmlFor="signup-password">Password</label>
         <input
           type="password"
           className="form-control"
@@ -31,21 +32,17 @@ const AuthForm = ({ buttonText, buttonSign, handleSubmit, slug }) => {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <div className="col text-center">
-        <button type="submit" className="btn btn-primary">
+      <div className="col">
+      <div class="btn-toolbar text-center">
+        <button type="submit" className="btn btn-light btn-lg">
           {buttonText}
         </button>
-        |
-        <button type="submit" className="btn btn-primary">
+        <hr/>
+        <button type="submit" className="btn btn-light btn-lg">
           {buttonSign}
         </button>
+        </div>
       </div>
-      <div>
-          <h5>Hold on little fella!</h5>
-          <h6>Do you have permission from your parents?</h6>
-          <h6>If not, go wrangle them up and lets get this started!</h6>
-      </div>
-
     </form>
   );
 };
