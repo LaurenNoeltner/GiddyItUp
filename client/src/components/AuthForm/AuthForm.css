@@ -1,0 +1,34 @@
+h5 {
+  font-size: 34px;
+  text-align: center;
+  font-family: "Cabin Sketch", cursive;
+  animation: jello;
+  animation-duration: 4s;
+}
+h6 {
+  font-size: 20px;
+  text-align: center;
+  font-family: "Rye", cursive;
+  animation: bounceInUp;
+  animation-duration: 3s;
+}
+label {
+  font-size: 20px;
+  font-weight: 550;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+button {
+    background-color: #990000 !important;
+    color: #fff!important;
+    border-color: #810020;
+    display: inline-block;
+    font-weight: 400;
+}
+button:hover{
+    background-color: #772111 !important;
+    color: #fff!important;
+    border-color: #3b0d0d;
+    display: inline-block;
+    font-weight: 400;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
