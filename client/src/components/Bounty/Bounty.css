@@ -43,6 +43,12 @@
 #taskName {
   margin: 3px;
 }
+#taskPoints {
+  font-family: "Smokum", cursive;
+  font-size: 30px;
+  font-weight: 600;
+}
+
 #placeText,
 #notesText {
   text-align: left;
