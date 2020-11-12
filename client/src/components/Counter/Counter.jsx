@@ -5,12 +5,13 @@
 // class Counter extends React.Component {
 //   // Setting the initial state of the Counter component
 //   state = {
-//     count: 0
+//     points: 0
 //   };
 //   // handleIncrement increases this.state.count by 1
 //   handleIncrement = () => {
 //     // We always use the setState method to update a component's state
-//     this.setState({ count: this.state.count + 1 });
+//     // this.setState({ count: this.state.points + {this.points} });
+//     console.log("hello")
 //   };
 
 //   // The render method returns the JSX that should be rendered
