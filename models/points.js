@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const PointsSchema = new Schema(
   {
     points: {
-      type: String,
+      type: Number,
       trim: true,
       required: "Points is required",
     },

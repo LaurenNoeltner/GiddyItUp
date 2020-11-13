@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import "./ParentBounty.css";
 import "../Bounty/Bounty.css";
 import API from "../utils/API";
-import Counter from "../Counter/Counter";
 
 
 
@@ -14,17 +13,19 @@ function ParentBounty(props) {
   const [tasks, setTasks] = useState([]);
   const [formObject, setFormObject] = useState({});
   const [points, setPoints] = useState(0);
-  
-  var localPoints = localStorage.getItem('tasks');
+  const [totalPoints, setTotalPoints] = useState(0);
+
+  // var localPoints = localStorage.getItem('tasks');
 
   useEffect(() => {
     // setPoints();
     loadTasks();
-    localStorage.setItem("tasks", points);
-    console.log(localPoints);
+    loadPoints();
+    // localStorage.setItem("tasks", points);
+    // console.log(localPoints);
 
 
-  }, [points]);
+  }, []);
 
 
   //load all tasks and sets them to tasks
@@ -46,18 +47,32 @@ function ParentBounty(props) {
         
     }
 
+    function loadPoints() {
+      API.getPoints()
+        .then((res) => {console.log("this is load points", res.data)})
+        .catch((err) => console.log(err));
+    }
+
+    function saveTotalPoints(totalPoints) {
+      API.savePoints({points: totalPoints})
+        .then((res) => {console.log("new total", res.data)})
+        .catch(err => console.log(err));
+    }
+
     function handleIncrement (task) {
       // We always use the setState method to update a component's state
       let newPoints = points;
       newPoints = parseInt(newPoints) + parseInt(task.points);
-      console.log(newPoints);
+      console.log("line 65", newPoints);
       setPoints(newPoints);
-      const localData = localStorage.getItem('tasks')
+      setTotalPoints(newPoints);
+
+      // const localData = localStorage.getItem('tasks')
       // console.log(props);
       // props.state.points = tasks;
       console.log(tasks, "this is supposed to say tasks");
       deleteTask(task._id);
-      //add local storage here
+      
 
 
 
@@ -148,6 +163,7 @@ function ParentBounty(props) {
             <div className="col-md-2"></div>
         </div>
         </div>
+        <button className="saveBtn" onClick={() => saveTotalPoints(totalPoints)} name="points">Save</button>
 
       <br />
       <form className="row addTaskBox">

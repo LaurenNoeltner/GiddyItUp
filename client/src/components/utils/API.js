@@ -26,4 +26,7 @@ export default {
   savePoints: function (pointData) {
     return axios.post("/api/points", pointData);
   },
+  putPoints: function (id, pointData) {
+    return axios.put("/api/points/:id", pointData);
+  },
 };

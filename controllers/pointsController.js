@@ -4,10 +4,10 @@ const db = require("../models");
 
 router.get("/", (req, res) => {
   db.Points.find({})
-    .populate("points")
-    .then((foundTask) => {
-      res.json(foundTask);
-    });
+    .then((foundPoints) => {
+      res.json(foundPoints);
+    })
+    .catch((err) => console.log(err));
 });
 
 router.get("/:id", (req, res) => {
