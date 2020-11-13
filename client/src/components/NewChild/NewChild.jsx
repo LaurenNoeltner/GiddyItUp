@@ -44,6 +44,7 @@ function NewChild() {
         firstName: childObject.firstName,
         lastName: childObject.lastName,
         age: childObject.age,
+        avatar: childObject.avatar,
       })
         .then((res) => loadChild())
         .catch((err) => console.log(err));
@@ -105,6 +106,9 @@ function NewChild() {
                     </input>
                   </div>
 
+
+                  
+
                   <div className="row">
                     <div className="col text-center">
                       <button
@@ -162,6 +166,7 @@ function NewChild() {
                 <div className="carousel-item active">
                   <img
                     src={DeputyOne}
+                    onChange={handleInputChange}
                     alt="DeputyOne"
                     width="150"
                     height="200"
@@ -170,6 +175,7 @@ function NewChild() {
                 <div className="carousel-item">
                   <img
                     src={DeputyTwo}
+                    onChange={handleInputChange}
                     alt="DeputyTwo"
                     width="150"
                     height="200"
@@ -178,6 +184,7 @@ function NewChild() {
                 <div className="carousel-item">
                   <img
                     src={DeputyThree}
+                    onChange={handleInputChange}
                     alt="DeputyThree"
                     width="150"
                     height="200"
@@ -186,7 +193,17 @@ function NewChild() {
                 <div className="carousel-item">
                   <img
                     src={DeputyFour}
+                    onChange={handleInputChange}
                     alt="DeputyFour"
+                    width="150"
+                    height="200"
+                  />
+                </div>
+                <div className="carousel-item">
+                <img
+                    src={DeputyFive}
+                    onChange={handleInputChange}
+                    alt="DeputyFive"
                     width="150"
                     height="200"
                   />
@@ -238,17 +255,17 @@ function NewChild() {
               <>
                 <div key={child._id} className="taskContainer create-children col-md-3">
                   <div>
-                    {child.firstName} {child.lastName} {child.age}
+                    {child.firstName} {child.lastName} {child.age} {child.avatar}
                   </div>
                   <hr />
                   <div className="row add-avatar">
                   
-                  <img
-                    src={DeputyFive}
+                  {/* <img
+                    src={child.avatar}
                     alt="DeputyFive"
                     width="150"
                     height="200"
-                  />
+                  /> */}
                 
                   </div>
                   <div className="del-btn">
