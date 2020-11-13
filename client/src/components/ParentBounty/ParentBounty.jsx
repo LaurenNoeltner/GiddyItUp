@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 // import { NavLink } from "react-router-dom";
 import "./ParentBounty.css";
 import "../Bounty/Bounty.css";
@@ -230,6 +231,15 @@ function ParentBounty(props) {
           </div>
         </div>
         <div className="col-md-2"></div>
+        <div className="col-sm-2 text-center">
+            <Link
+                  type="submit"
+                  className="btn btn-primary button btn-lg  text-center sign-in-btn"
+                  to="/"
+                >
+                  Logout
+              </Link>
+            </div>
       </form>
     </>
   );

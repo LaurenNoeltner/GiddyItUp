@@ -9,12 +9,14 @@ import Sheriff from "../../images/SheriffMom.png";
 class Saloon extends Component {
   render() {
     return (
-      <div className="bg-img">
+      <div className="container bg-img">
         <div className="row saloon-card"></div>
-        <div className="row">
-          <div className="col-md-1"></div>
-          <div className="card col-md-3 deputy-card ">
-            <div className="card-body">
+        
+        <div className="row card-margin">
+        
+          <div className="col-md-5">  
+          <div className="jumbotron  w-100 d-flex flex-column col-margin deputy-card ">
+            <div className="card-body ">
               <h5 className="card-title">DEPUTY</h5>
               <div
                 id="carouselExampleIndicators"
@@ -107,9 +109,12 @@ class Saloon extends Component {
               </div>
             </div>
           </div>
-          <div className="col-md-4"></div>
-          <div className="card col-md-3 sheriff-card">
-            <div className="card-body">
+          </div>
+          <div className="space-between-jumbotron"></div>
+          <div className="col-md-5"> 
+
+          <div className="jumbotron w-100 d-flex flex-column col-margin sheriff-card">
+            <div className="card-body ">
               <h5 className="card-title">SHERIFF</h5>
               <div
                 id="carouselExampleIndicators"
@@ -140,7 +145,47 @@ class Saloon extends Component {
               </div>
             </div>
           </div>
-          <div className="col-1"></div>
+          
+          </div>
+          
+          
+          {/* <div className="col-md-4"></div> */}
+{/* 
+          <div className="jumbotron w-100 d-flex flex-column col-margin sheriff-card">
+            <div className="card-body ">
+              <h5 className="card-title">SHERIFF</h5>
+              <div
+                id="carouselExampleIndicators"
+                className="carousel slide"
+                data-ride="carousel"
+              >
+                <ol className="carousel-indicators">
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="0"
+                    className="active"
+                  ></li>
+                </ol>
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                    <img src={Sheriff} alt="Sheriff" width="150" height="200" />
+                  </div>
+                </div>
+              </div>
+              <div className="board-link">
+                <NavLink
+                  to="/ParentBounty"
+                  activeClassName="selected"
+                  id="board-link"
+                >
+                  Sheriff's Board
+                </NavLink>
+              </div>
+            </div>
+          </div>
+           */}
+          {/* <div className="col-1"></div> */}
+          
         </div>
       </div>
     );

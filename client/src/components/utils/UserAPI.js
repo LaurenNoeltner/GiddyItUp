@@ -11,7 +11,7 @@ export default {
     },
 
     signup: function (userData) {
-        return axios.post("/api/user/sign-up", userData)
+        return axios.post("/api/user/signup", userData)
     },
 
     editUser: function (id, body) {
