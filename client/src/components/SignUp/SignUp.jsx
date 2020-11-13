@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 import API from "../utils/UserAPI";
 // import AuthForm from "../AuthForm/AuthForm";
 import { Link, useHistory } from "react-router-dom";
-import "./SignUp.css"
+import "./SignUp.css";
 
 const SignUp = () => {
   const [state, setState] = useState({
-    emailAddress: "",
+    email: "",
     password: "",
     firstName: "",
     lastName: "",
@@ -50,22 +50,20 @@ const SignUp = () => {
       return;
     }
     if (!state.email) {
-      alert(
-        "Please confirm your email address"
-      );
+      alert("Please confirm your email address");
       return;
     }
     API.signup(state)
       .then((response) => {
         sessionStorage.setItem("currentUsers", response.data.data._id);
         //using the useHistory hook to redirect without refreshing
-        history.push("/login");
+        history.push("/");
       })
       .catch((err) => {
         throw err;
       });
     setState({
-      emailAddress: "",
+      email: "",
       password: "",
       firstName: "",
       lastName: "",
@@ -86,8 +84,7 @@ const SignUp = () => {
         </section>
         <section className="row">
           <div className="col-sm-12">
-            <form
-              onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <input
                   value={state.firstName}
@@ -147,29 +144,26 @@ const SignUp = () => {
                   placeholder="Confirm Password"
                 />
               </div>
-              <br/>
+              <br />
               <div className="row create-acct">
                 <div className="col text-center">
-                <Link
-                  type="submit"
-                  className="btn btn-primary btn-lg button sign-in-btn create-acct-btn"
-                  to="/"
-                >
-                  CREATE ACCOUNT
-              </Link>
+                  {/* <Link
+                    type="submit"
+                    className="btn btn-primary btn-lg button sign-in-btn create-acct-btn"
+                    to="/"
+                  >
+                    CREATE ACCOUNT
+                  </Link> */}
+                  <button type="submit" className="btn btn-primary">
+                    Create Account
+                  </button>
                 </div>
-               
               </div>
-
             </form>
           </div>
         </section>
-
-
       </div>
-
     </div>
-
   );
 };
 
