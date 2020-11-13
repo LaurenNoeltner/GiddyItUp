@@ -55,7 +55,7 @@ const SignUp = () => {
     }
     API.signup(state)
       .then((response) => {
-        sessionStorage.setItem("currentUsers", response.data.data._id);
+        sessionStorage.setItem("currentUsers", response.data._id);
         //using the useHistory hook to redirect without refreshing
         history.push("/");
       })
@@ -148,13 +148,16 @@ const SignUp = () => {
               <br />
               <div className="row create-acct">
                 <div className="col text-center">
-                <Link
+                {/* <Link
                   type="submit"
                   className="btn btn-light button sign-in-btn create-acct-btn"
                   to="/"
                 >
                   CREATE ACCOUNT
-              </Link>
+              </Link> */}
+              <button type="submit" className="btn btn-primary button">
+                Create Account
+              </button>
                 </div>
               </div>
             </form>
