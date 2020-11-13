@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import DeputyTwo from "../../images/DeputyBoy.png";
 import MoneyBag from "../../images/newMoneyBag.png";
 import "./KidProfile.css";
-import API from "../utils/API";
+// import API from "../utils/API";
 import ChildAPI from '../utils/ChildAPI';
 
 
@@ -15,7 +15,7 @@ function KidProfile() {
     }, []);
 
     function loadChild() {
-        API.getChild()
+        ChildAPI.getChild()
         .then((res) => {
             console.log (res);
             setChild(res.data);
