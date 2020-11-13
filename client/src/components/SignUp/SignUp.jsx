@@ -71,20 +71,21 @@ const SignUp = () => {
   };
 
   return (
-    <div className="container">
-      <div className="row login-jumbotron">
-        <br />
-        <br />
+    <div className="container sign-up-form">
+      <div className="row form-margin">
       </div>
       <div className="jumbotron">
-        <section className="row">
+        <div className="row">
           <div className="col-sm-12">
-            <h1 className="welcome text-center">Sign up</h1>
+            <h1 className="welcome text-center"> 🐎  Sign up 🐎</h1>
+            <h3 className="text-center">You must be a parent to create an account! 🚨</h3>
           </div>
-        </section>
+        </div>
         <section className="row">
-          <div className="col-sm-12">
-            <form onSubmit={handleSubmit}>
+        <div className="col-sm-2"></div>
+          <div className="col-sm-8">
+            <form
+              onSubmit={handleSubmit}>
               <div className="form-group">
                 <input
                   value={state.firstName}
@@ -147,16 +148,13 @@ const SignUp = () => {
               <br />
               <div className="row create-acct">
                 <div className="col text-center">
-                  {/* <Link
-                    type="submit"
-                    className="btn btn-primary btn-lg button sign-in-btn create-acct-btn"
-                    to="/"
-                  >
-                    CREATE ACCOUNT
-                  </Link> */}
-                  <button type="submit" className="btn btn-primary">
-                    Create Account
-                  </button>
+                <Link
+                  type="submit"
+                  className="btn btn-light button sign-in-btn create-acct-btn"
+                  to="/"
+                >
+                  CREATE ACCOUNT
+              </Link>
                 </div>
               </div>
             </form>

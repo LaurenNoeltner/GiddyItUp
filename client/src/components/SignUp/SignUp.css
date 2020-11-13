@@ -1,12 +1,32 @@
+.sign-up-form {
+  margin-bottom: 280px;
+}
 .welcome {
     font-family: "Smokum", cursive;
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 500;
     text-shadow: white 0px 0px 20px;
-    animation: zoomInDown; 
+    animation: fadeInRight; 
     animation-duration: 2s; 
+    margin-top: -30px;
     margin-bottom: 30px;
   }
+
 .create-acct-btn {
-    width: 220px!important;
+  background-color: #990000 !important;
+  border-color: white;
+  color: #fff!important;
+  display: inline-block;
+  font-weight: 400;
+  width: 220px!important;
+  padding: 8px 0px;
+  margin-left: 6px
+}
+button:hover{
+  background-color: #772111 !important;
+  color: #fff!important;
+  border-color: #3b0d0d;
+  display: inline-block;
+  font-weight: 400;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }

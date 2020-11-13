@@ -12,8 +12,8 @@ class Saloon extends Component {
       <div className="bg-img">
         <div className="row saloon-card"></div>
         <div className="row">
-          <div className="col-1"></div>
-          <div className="card col-3 deputy-card ">
+          <div className="col-md-1"></div>
+          <div className="card col-md-3 deputy-card ">
             <div className="card-body">
               <h5 className="card-title">DEPUTY</h5>
               <div
@@ -107,8 +107,8 @@ class Saloon extends Component {
               </div>
             </div>
           </div>
-          <div className="col-4"></div>
-          <div className="card col-3 sheriff-card">
+          <div className="col-md-4"></div>
+          <div className="card col-md-3 sheriff-card">
             <div className="card-body">
               <h5 className="card-title">SHERIFF</h5>
               <div
