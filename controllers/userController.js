@@ -1,5 +1,6 @@
 const express = require("express");
 const db = require("../models");
+const jwt = require ('jsonwebtoken');
 
 const router = express.Router();
 
@@ -21,7 +22,7 @@ router.get("/:id", (req, res) => {
       data: null,
       message: "no id provided.",
     });
-    
+
   }
   db.User.findById(req.params.id)
     .then((foundUser) => {
@@ -53,15 +54,15 @@ router.post("/sign-up", (req, res) => {
   });
 });
 
-router.post("/login", (req, res) => {
+router.post("/", (req, res) => {
   console.log(req.body);
-  db.User.findOne({email:req.body.email}).then((foundUser) => {
-    if (foundUser.password === req.body.password){
+  db.User.findOne({ email: req.body.email }).then((foundUser) => {
+    if (foundUser.password === req.body.password) {
       // res.json(foundUser);
-      const token = jwt.sign({ data: foundUser }, secret, { expiresIn: expiration });
+      const token = jwt.sign({ data: foundUser });
       res.json({
         error: false,
-        data: {foundUser, token},
+        data: { foundUser, token },
         message: "Successfully logged in user.",
       });
       console.log(token);
@@ -74,7 +75,7 @@ router.post("/login", (req, res) => {
 // the total route /api/user/:id
 router.put("/:id", (req, res) => {
   db.User.findByIdAndUpdate(req.params.id,
-    req.body, {new: true})
+    req.body, { new: true })
     .then((updatedUser) => {
       console.log(updatedUser);
       res.json({
@@ -96,7 +97,7 @@ router.put("/:id", (req, res) => {
 // Delete route works now.
 // the total route /api/user/:id
 router.delete("/:id", (req, res) => {
-  db.User.findByIdAndDelete({ _id: req.params.id})
+  db.User.findByIdAndDelete({ _id: req.params.id })
     .then((deletedUser) => {
       console.log(deletedUser);
       res.json({

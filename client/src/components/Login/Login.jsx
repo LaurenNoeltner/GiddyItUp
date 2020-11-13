@@ -93,24 +93,30 @@ const Login = () => {
             </div>
             <div className="row" id="sign-in-btns">
               <div className="col-sm-3 text-center">
-                <Link
+                {/* <Link
                   type="submit"
                   className="btn btn-primary button btn-lg sign-in-btn"
                   to="/NewChild"
                 >
                   LOGIN
-              </Link>
+              </Link> */}
+                <button
+                  type="submit"
+                  className="btn btn-primary button btn-lg  text-center sign-in-btn"
+                  onClick={handleSubmit}
+                >
+                  LOGIN
+                </button>
               </div>
-              <div className="col-sm-3">
-              </div>
+              <div className="col-sm-3"></div>
               <div className="col-sm-2 text-center">
                 <Link
                   type="submit"
                   className="btn btn-primary button btn-lg  text-center sign-in-btn"
                   to="/signup"
                 >
-                  SIGN IN
-              </Link>
+                  SIGN UP
+                </Link>
               </div>
             </div>
           </div>
