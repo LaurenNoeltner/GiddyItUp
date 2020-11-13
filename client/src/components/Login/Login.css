@@ -1,5 +1,5 @@
-.login-jumbotron {
-  margin-bottom: 250px;
+.login-form {
+  margin-bottom: 280px;
 }
 .jumbotron {
   background-color: rgba(255, 255, 255, 0.4); /* Black w/ opacity */
@@ -12,17 +12,19 @@
 }
 .welcome-back {
   font-family: "Smokum", cursive;
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 500;
   text-shadow: white 0px 0px 20px;
-  animation: shakeY; 
-  animation-duration: 1s; 
+  animation: shakeY;
+  animation-duration: 1s;
+  margin-top: -30px;
+  margin-bottom: 30px;
 }
 
 h3 {
   font-family: "Rye", cursive;
   text-shadow: white 0px 0px 20px;
-  margin-bottom: 40px
+  margin-bottom: 40px;
 }
 
 h5 {
@@ -45,20 +47,21 @@ label {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 .sign-in-btn {
-    background-color: #990000 !important;
-    color: #fff!important;
-    border-color: #810020;
-    display: inline-block;
-    font-weight: 400;
-    width: 110px;
-    padding: 8px 0px;
-    margin-left: 6px
+  background-color: #990000 !important;
+  border-color: white;
+  color: #fff !important;
+  display: inline-block;
+  font-weight: 400;
+  width: 110px;
+  padding: 8px 0px;
+  margin-left: 6px;
 }
-button:hover{
-    background-color: #772111 !important;
-    color: #fff!important;
-    border-color: #3b0d0d;
-    display: inline-block;
-    font-weight: 400;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+button:hover {
+  background-color: #3f0e0e !important;
+  color: #fff !important;
+  border-color: #3b0d0d;
+  display: inline-block;
+  font-weight: 400;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }

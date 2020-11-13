@@ -52,15 +52,13 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
-      <div className="row login-jumbotron">
-        <br />
-        <br />
+    <div className="container login-form">
+      <div className="row form-margin">
       </div>
       <div className="jumbotron">
         <div className="row">
           <div className="col text-center">
-            <h1 className="welcome-back">Howdy Partner!</h1>
+            <h1 className="welcome-back">Howdy Partner! 🤠</h1>
             <h3>Go on and check in below.</h3>
           </div>
         </div>
@@ -91,11 +89,11 @@ const Login = () => {
                 placeholder="password"
               />
             </div>
-            <div className="row" id="sign-in-btns">
+            <div className="row d-flex" id="sign-in-btns">
               <div className="col-sm-3 text-center">
                 <Link
                   type="submit"
-                  className="btn btn-primary button btn-lg sign-in-btn"
+                  className="btn btn-light button  sign-in-btn"
                   to="/NewChild"
                 >
                   LOGIN
@@ -106,7 +104,7 @@ const Login = () => {
               <div className="col-sm-2 text-center">
                 <Link
                   type="submit"
-                  className="btn btn-primary button btn-lg  text-center sign-in-btn"
+                  className="btn btn-light button   text-center sign-in-btn"
                   to="/signup"
                 >
                   SIGN IN
@@ -116,9 +114,9 @@ const Login = () => {
           </div>
           <div className="col-sm-12">
             <hr className="my-4" />
-            <h5 className="my-2 text-center">Hold on little fella!</h5>
+            <h5 className="my-2 text-center">Hold on little fella! </h5>
             <h6 className="my-2 text-center">
-              Do you have permission from your parents?
+              Do you have permission from your parents? 🤪
             </h6>
             <h6 className="my-2 text-center">
               If not, go wrangle them up and lets get this started!
