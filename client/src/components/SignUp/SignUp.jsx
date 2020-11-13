@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 import API from "../utils/UserAPI";
 // import AuthForm from "../AuthForm/AuthForm";
 import { Link, useHistory } from "react-router-dom";
-import "./SignUp.css"
+import "./SignUp.css";
 
 const SignUp = () => {
   const [state, setState] = useState({
-    emailAddress: "",
+    email: "",
     password: "",
     firstName: "",
     lastName: "",
@@ -18,7 +18,7 @@ const SignUp = () => {
   useEffect(() => {
     const id = sessionStorage.getItem("currentUsers");
     if (id) {
-      history.push("/Saloon");
+      history.push("/signup");
     }
   }, [history]);
 
@@ -50,22 +50,20 @@ const SignUp = () => {
       return;
     }
     if (!state.email) {
-      alert(
-        "Please confirm your email address"
-      );
+      alert("Please confirm your email address");
       return;
     }
     API.signup(state)
       .then((response) => {
-        sessionStorage.setItem("currentUsers", response.data.data._id);
+        sessionStorage.setItem("currentUsers", response.data);
         //using the useHistory hook to redirect without refreshing
-        history.push("/login");
+        history.push("/");
       })
       .catch((err) => {
         throw err;
       });
     setState({
-      emailAddress: "",
+      email: "",
       password: "",
       firstName: "",
       lastName: "",
@@ -147,29 +145,26 @@ const SignUp = () => {
                   placeholder="Confirm Password"
                 />
               </div>
-              <br/>
+              <br />
               <div className="row create-acct">
                 <div className="col text-center">
-                <Link
+                {/* <Link
                   type="submit"
                   className="btn btn-light button sign-in-btn create-acct-btn"
                   to="/"
                 >
                   CREATE ACCOUNT
-              </Link>
+              </Link> */}
+              <button type="submit" className="btn btn-primary button">
+                Create Account
+              </button>
                 </div>
-               
               </div>
-
             </form>
           </div>
         </section>
-
-
       </div>
-
     </div>
-
   );
 };
 
