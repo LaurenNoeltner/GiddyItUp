@@ -100,7 +100,7 @@ const Login = () => {
               </Link> */}
                 <button
                   type="submit"
-                  className="btn btn-primary button btn-lg  text-center sign-in-btn"
+                  className="btn btn-primary button text-center sign-in-btn"
                   onClick={handleSubmit}
                 >
                   LOGIN
