@@ -37,9 +37,9 @@ const Login = () => {
       .then((response) => {
         sessionStorage.setItem(
           "currentUsers",
-          response.data.data.foundUser._id
+          response.data.foundUser
         );
-        sessionStorage.setItem("userToken", response.data.data.token);
+        // sessionStorage.setItem("userToken", response.data.data.token);
         history.push("/NewChild");
       })
       .catch((err) => {
