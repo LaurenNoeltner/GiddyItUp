@@ -9,6 +9,7 @@ import SignUp from "./components/SignUp/SignUp";
 import Login from "./components/Login/Login";
 import NewChild from "./components/NewChild/NewChild";
 
+
 class App extends Component {
   // constructor(props) {
   //   super(props);
