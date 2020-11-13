@@ -15,7 +15,7 @@ const Login = () => {
   useEffect(() => {
     const id = sessionStorage.getItem("currentUsers");
     if (id) {
-      history.push("/NewChild");
+      history.push("/");
     }
   }, [history]);
 
@@ -37,9 +37,9 @@ const Login = () => {
       .then((response) => {
         sessionStorage.setItem(
           "currentUsers",
-          response.data.data.foundUser._id
+          response.data.foundUser
         );
-        sessionStorage.setItem("userToken", response.data.data.token);
+        // sessionStorage.setItem("userToken", response.data.data.token);
         history.push("/NewChild");
       })
       .catch((err) => {
@@ -86,29 +86,35 @@ const Login = () => {
                 className="form-control sign-in-input"
                 id="exampleInputPassword1"
                 aria-describedby="passwordHelp"
-                placeholder="password"
+                placeholder="Password"
               />
             </div>
             <div className="row d-flex" id="sign-in-btns">
               <div className="col-sm-3 text-center">
-                <Link
+                {/* <Link
                   type="submit"
                   className="btn btn-light button  sign-in-btn"
                   to="/NewChild"
                 >
                   LOGIN
-              </Link>
+              </Link> */}
+                <button
+                  type="submit"
+                  className="btn btn-primary button text-center sign-in-btn"
+                  onClick={handleSubmit}
+                >
+                  LOGIN
+                </button>
               </div>
-              <div className="col-sm-3">
-              </div>
+              <div className="col-sm-3"></div>
               <div className="col-sm-2 text-center">
                 <Link
                   type="submit"
                   className="btn btn-light button   text-center sign-in-btn"
                   to="/signup"
                 >
-                  SIGN IN
-              </Link>
+                  SIGN UP
+                </Link>
               </div>
             </div>
           </div>
