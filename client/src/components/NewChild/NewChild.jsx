@@ -56,7 +56,7 @@ function NewChild() {
       <div className="row new-child-row "></div>
       <div className="row jumbotron-margin">
 
-        <div class="col-md-6">
+        <div className="col-md-6">
           <div className="jumbotron w-100 d-flex flex-column">
             <div className="row">
               <div className="col text-center">

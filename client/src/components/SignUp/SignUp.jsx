@@ -55,7 +55,7 @@ const SignUp = () => {
     }
     API.signup(state)
       .then((response) => {
-        sessionStorage.setItem("currentUsers", response.data._id);
+        sessionStorage.setItem("currentUsers", response.data);
         //using the useHistory hook to redirect without refreshing
         history.push("/");
       })
