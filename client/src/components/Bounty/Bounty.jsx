@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
-
 // import ParentBounty from "../ParentBounty/ParentBounty";
 import "./Bounty.css";
-import API from "../utils/API"
+import API from "../utils/API";
+import ChildAPI from '../utils/ChildAPI';
+import KidProfile from '../KidProfile/KidProfile';
+
+
+
 
 
 
@@ -25,6 +29,8 @@ function Bounty() {
             })
             .catch(err => console.log(err));
     };
+
+    
 
     // Deletes a book from the database with a given id, then reloads books from the db
     // function deleteTask(id) {
@@ -59,11 +65,15 @@ function Bounty() {
         <>
         <div className="bounty-page">
         <div className="container">
+
+                <KidProfile />
+
                 <div className="row" >
                     <div className="col-md-3"></div>
                     <div id="boardTitle" className="col-md-5">Bounty Board</div>
                     <div className="col-md-3 ">
-                        <h3 id="Points">Points: ${tasks.points}</h3>
+                    <h3 id="Points">Points: ${tasks.points}</h3>
+                       
                     </div>
                 </div>
 
@@ -75,6 +85,7 @@ function Bounty() {
                                 <>
                                     <div key={task.identifier} className="taskContainer col-md-3">
                                         <div id="taskPoints">Bounty: ${task.points}</div>   
+                                       
                                         <hr />
                                         <div id="taskName">  
                                             <strong>{task.task}</strong>  
