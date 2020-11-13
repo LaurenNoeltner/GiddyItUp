@@ -14,53 +14,29 @@ function ParentBounty(props) {
   const [tasks, setTasks] = useState([]);
   const [formObject, setFormObject] = useState({});
   const [points, setPoints] = useState(0);
-
+  
+  var localPoints = localStorage.getItem('tasks');
 
   useEffect(() => {
+    // setPoints();
     loadTasks();
-    // localStorage.setItem('tasks', JSON.stringify(tasks))
-    
-  }, []);
-  
-  React.useEffect(() => {
-    localStorage.setItem("tasks", 25);
-  }, [25]);
-  //local storage
-  // const [tasks, task] = useReducer(taskReducer, [], () => {
-  //     const localData = localStorage.getItem('tasks');
-  //     return localData ? JSON.parse(localData) : [];
-  // });
-  const useStateWithLocalStorage = localStorageKey => {
-      const [value, setValue] = React.useState(
-        localStorage.getItem(localStorageKey) || ''
-      );
-      React.useEffect(() => {
-        localStorage.setItem(localStorageKey, value);
-      }, [value]);
-      return [value, setValue];
-    };
+    localStorage.setItem("tasks", points);
+    console.log(localPoints);
 
 
-  useStateWithLocalStorage();
-  ///this block is debatably useful, but not working
-  // const [value, setValue] =useStateWithLocalStorage(
-  //   'points'
-  // );
-  // const onChange = event => setValue(event.target.value);
-  ///// ^^
-
-  //load all tasks
+  }, [points]);
 
 
   //load all tasks and sets them to tasks
     function loadTasks() {
       API.getTasks()
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           setTasks(res.data);
         })
         .catch((err) => console.log(err));
     }
+
 
     // Deletes a task from the database with a given id, then reloads task from the db
     function deleteTask(id) {
