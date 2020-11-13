@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 // import ParentBounty from "../ParentBounty/ParentBounty";
+=======
+
+import {handleIncrement} from "../ParentBounty/ParentBounty";
+>>>>>>> parent_bounty
 import "./Bounty.css";
 import API from "../utils/API";
 import ChildAPI from '../utils/ChildAPI';
@@ -13,6 +18,8 @@ import KidProfile from '../KidProfile/KidProfile';
 function Bounty() {
 
     const [tasks, setTasks] = useState([]);
+    // const [formObject, setFormObject] = useState({});
+    // const [points, setPoints] = useState(0);
     // const [formObject, setFormObject] = useState ({});
 
     //load all tasks
@@ -30,7 +37,26 @@ function Bounty() {
             .catch(err => console.log(err));
     };
 
+<<<<<<< HEAD
     
+=======
+    // function handleIncrement (task) {
+    //     // We always use the setState method to update a component's state
+    //     let newPoints = points;
+    //     newPoints = parseInt(newPoints) + parseInt(task.points);
+    //     console.log(newPoints);
+    //     setPoints(newPoints);
+    //     const localData = localStorage.getItem('tasks')
+    //     // console.log(props);
+    //     // props.state.points = tasks;
+    //     console.log(tasks, "this is supposed to say tasks");
+    //     // deleteTask(task._id);
+    //     //add local storage here
+  
+  
+  
+    //   };
+>>>>>>> parent_bounty
 
     // Deletes a book from the database with a given id, then reloads books from the db
     // function deleteTask(id) {
@@ -72,8 +98,12 @@ function Bounty() {
                     <div className="col-md-3"></div>
                     <div id="boardTitle" className="col-md-5">Bounty Board</div>
                     <div className="col-md-3 ">
+<<<<<<< HEAD
                     <h3 id="Points">Points: ${tasks.points}</h3>
                        
+=======
+                        <h3 id="Points">Points: ${tasks}</h3>
+>>>>>>> parent_bounty
                     </div>
                 </div>
 
