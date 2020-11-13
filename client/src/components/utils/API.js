@@ -17,4 +17,16 @@ export default {
   saveTask: function (taskData) {
     return axios.post("/api/tasks", taskData);
   },
+
+  ///do this for points too VVVVV
+  getPoints: function () {
+    return axios.get("/api/points");
+  },
+  // Saves a task to the database
+  savePoints: function (pointData) {
+    return axios.post("/api/points", pointData);
+  },
+  putPoints: function (id, pointData) {
+    return axios.put("/api/points/:id", pointData);
+  },
 };

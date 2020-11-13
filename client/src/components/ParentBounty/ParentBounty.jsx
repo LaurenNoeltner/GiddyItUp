@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import "./ParentBounty.css";
 import "../Bounty/Bounty.css";
 import API from "../utils/API";
-import Counter from "../Counter/Counter";
 
 
 
@@ -15,53 +14,31 @@ function ParentBounty(props) {
   const [tasks, setTasks] = useState([]);
   const [formObject, setFormObject] = useState({});
   const [points, setPoints] = useState(0);
+  const [totalPoints, setTotalPoints] = useState(0);
 
+  // var localPoints = localStorage.getItem('tasks');
 
   useEffect(() => {
+    // setPoints();
     loadTasks();
-    // localStorage.setItem('tasks', JSON.stringify(tasks))
-    
+    loadPoints();
+    // localStorage.setItem("tasks", points);
+    // console.log(localPoints);
+
+
   }, []);
-  
-  React.useEffect(() => {
-    localStorage.setItem("tasks", 25);
-  }, [25]);
-  //local storage
-  // const [tasks, task] = useReducer(taskReducer, [], () => {
-  //     const localData = localStorage.getItem('tasks');
-  //     return localData ? JSON.parse(localData) : [];
-  // });
-  const useStateWithLocalStorage = localStorageKey => {
-      const [value, setValue] = React.useState(
-        localStorage.getItem(localStorageKey) || ''
-      );
-      React.useEffect(() => {
-        localStorage.setItem(localStorageKey, value);
-      }, [value]);
-      return [value, setValue];
-    };
-
-
-  useStateWithLocalStorage();
-  ///this block is debatably useful, but not working
-  // const [value, setValue] =useStateWithLocalStorage(
-  //   'points'
-  // );
-  // const onChange = event => setValue(event.target.value);
-  ///// ^^
-
-  //load all tasks
 
 
   //load all tasks and sets them to tasks
     function loadTasks() {
       API.getTasks()
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           setTasks(res.data);
         })
         .catch((err) => console.log(err));
     }
+
 
     // Deletes a task from the database with a given id, then reloads task from the db
     function deleteTask(id) {
@@ -71,18 +48,32 @@ function ParentBounty(props) {
         
     }
 
+    function loadPoints() {
+      API.getPoints()
+        .then((res) => {console.log("this is load points", res.data)})
+        .catch((err) => console.log(err));
+    }
+
+    function saveTotalPoints(totalPoints) {
+      API.savePoints({points: totalPoints})
+        .then((res) => {console.log("new total", res.data)})
+        .catch(err => console.log(err));
+    }
+
     function handleIncrement (task) {
       // We always use the setState method to update a component's state
       let newPoints = points;
       newPoints = parseInt(newPoints) + parseInt(task.points);
-      console.log(newPoints);
+      console.log("line 65", newPoints);
       setPoints(newPoints);
-      const localData = localStorage.getItem('tasks')
+      setTotalPoints(newPoints);
+
+      // const localData = localStorage.getItem('tasks')
       // console.log(props);
       // props.state.points = tasks;
       console.log(tasks, "this is supposed to say tasks");
       deleteTask(task._id);
-      //add local storage here
+      
 
 
 
@@ -173,6 +164,7 @@ function ParentBounty(props) {
             <div className="col-md-2"></div>
         </div>
         </div>
+        <button className="saveBtn" onClick={() => saveTotalPoints(totalPoints)} name="points">Save</button>
 
       <br />
       <form className="row addTaskBox">

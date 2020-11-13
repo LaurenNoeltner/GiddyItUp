@@ -10,6 +10,10 @@ const app = express();
 const ParentController = require("./controllers/parentController");
 const ChildController = require("./controllers/childController");
 const TaskController = require("./controllers/taskController");
+<<<<<<< HEAD
+=======
+const PointsController = require("./controllers/pointsController");
+>>>>>>> parent_bounty
 const UserController = require("./controllers/userController");
 
 app.use(express.urlencoded({ extended: true }));
@@ -45,6 +49,7 @@ app.use("/api/parent", ParentController);
 app.use("/api/child", ChildController);
 app.use("/api/tasks", TaskController);
 app.use("/api/user", UserController);
+app.use("/api/points", PointsController);
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
