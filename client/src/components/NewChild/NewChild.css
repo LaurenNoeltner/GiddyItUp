@@ -1,0 +1,146 @@
+.new-child-form {
+  margin-bottom: 280px;
+  width: 1500px;
+  height: 1000px;
+}
+.create-child {
+  font-family: "Smokum", cursive;
+  font-size: 60px;
+  font-weight: 500;
+  text-shadow: white 0px 0px 20px;
+  animation: rubberBand;
+  animation-duration: 1s;
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+h6 {
+  font-family: "Rye", cursive;
+  text-shadow: white 0px 0px 20px;
+  margin-bottom: 40px;
+}
+.new-child-row {
+  margin-bottom: 80px;
+}
+.form-margin {
+  margin-bottom: 280px !important;
+}
+.jumbotron-margin {
+  margin-top: 280px !important;
+}
+.save-button {
+  background-color: #990000 !important;
+  border-color: white;
+  color: #fff !important;
+  display: inline-block;
+  font-weight: 400;
+  width: 180px !important;
+  padding: 8px 0px;
+  margin-left: 6px;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: #772111 !important;
+  color: #fff !important;
+  border-color: #3b0d0d;
+  display: inline-block;
+  font-weight: 400;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.carousel-inner {
+  margin-top: -150px;
+  margin-left: auto;
+}
+.saloon-card {
+  margin-bottom: 120px;
+}
+.deputy-card {
+  width: "150";
+  height: "200";
+}
+.create-title {
+  margin-top: -80px;
+  font-family: "Smokum", cursive;
+  text-shadow: #ffffff 0px 0px 5px;
+  font-size: 70px;
+  font-weight: 700;
+  color: black;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  margin-top: 0px;
+}
+.carousel-control-prev-icon:after {
+  margin-bottom: 30px;
+  content: "" !important;
+  font-size: 35px;
+  color: #000000;
+}
+.carousel-control-next-icon:after {
+  content: "" !important;
+  font-size: 35px;
+  color: #000000;
+}
+.carousel .carousel-indicators li {
+  background-color: #fff;
+  background-color: rgba(70, 70, 70, 0.25);
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #444;
+}
+.bi-person-dash-fill {
+  color: white;
+  font-size: 25px;
+}
+button {
+  border-color: rgb(0, 0, 0);
+  background-color: #990000;
+  border-radius: 5px;
+  padding: 3px 8px;
+}
+
+.create-children {
+  font-size: 25px;
+  color: rgb(6, 17, 41);
+  font-family: "Rye", cursive;
+  text-shadow: white 0px 0px 20px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #990000;
+  background-color: transparent !important;
+  padding: 20px 20px 20px 20px;
+  margin-left: 15px;
+  text-align: center;
+  border-radius: 5px;
+  height: 380px;
+  animation: rubberBand;
+  animation-duration: 2s;
+}
+.add-child {
+  margin-top: 50px;
+}
+/* .add-avatar {
+    background-image: url("../../images/DeputyMask.png") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+.del-btn {
+  margin-top: 40px !important;
+}
+.add-avatar {
+  margin-left: 30px !important;
+}
+.all-children {
+  /* margin-bottom: 50px; */
+  padding-bottom: 50px;
+}
+.bottom-margin {
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+  padding-bottom: 60px;
+}
+.resize-card {
+  padding: 30px 32px !important;
+}
