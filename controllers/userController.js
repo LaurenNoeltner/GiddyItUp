@@ -1,6 +1,7 @@
 const express = require("express");
 const db = require("../models");
 const jwt = require ('jsonwebtoken');
+const bcrypt = require ('bcrypt');
 
 const router = express.Router();
 
@@ -43,18 +44,51 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.post("/sign-up", (req, res) => {
-  const newUser = (req.body);
-  db.User.create(newUser).then((newUser) => {
-    res.json({
-      error: false,
-      data: newUser,
-      message: "Successfully created user.",
-    });
-  });
+// router.post("/sign-up", (req, res) => {
+//   const newUser = (req.body);
+//   db.User.create(newUser).then((newUser) => {
+//     res.json({
+//       error: false,
+//       data: newUser,
+//       message: "Successfully created user.",
+//     });
+//   });
+// });
+
+router.post("/signup", (req, res) => {
+  const { email, password } = req.body;
+  //   console.log(emailAddress);
+  //   console.log(password);
+  if (!email.trim() || !password.trim()) {
+    res.status(400);
+  } else {
+    bcrypt
+      .hash(password, 10)
+      .then((hashedPassword) => {
+        // console.log(hashedPassword);
+        db.User.create({
+          email: email,
+          password: hashedPassword,
+        })
+          .then((newUser) => {
+            res.json(newUser);
+          })
+          .catch((err) => {
+            console.log(err);
+            res.status(500).json({
+              error: true,
+              data: null,
+              message: "Unable to signup.",
+            });
+          });
+      })
+      .catch((err) => {
+        res.status(500);
+      });
+  }
 });
 
-router.post("/", (req, res) => {
+router.post("/login", (req, res) => {
   console.log(req.body);
   db.User.findOne({ email: req.body.email }).then((foundUser) => {
     if (foundUser.password === req.body.password) {
