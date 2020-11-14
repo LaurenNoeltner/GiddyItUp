@@ -8,6 +8,7 @@ import API from "../utils/API";
 
 
 
+
 function ParentBounty(props) {
 
 
@@ -19,11 +20,9 @@ function ParentBounty(props) {
   // var localPoints = localStorage.getItem('tasks');
 
   useEffect(() => {
-    // setPoints();
+
     loadTasks();
     loadPoints();
-    // localStorage.setItem("tasks", points);
-    // console.log(localPoints);
 
 
   }, []);
@@ -50,14 +49,14 @@ function ParentBounty(props) {
 
     function loadPoints() {
       API.getPoints()
-        .then((res) => {console.log("this is load points", res.data)})
+        .then((res) => {loadPoints(res.data)})
         .catch((err) => console.log(err));
     }
 
-    function saveTotalPoints(totalPoints) {
-      API.savePoints({points: totalPoints})
-        .then((res) => {console.log("new total", res.data)})
-        .catch(err => console.log(err));
+    function saveTotalPoints(newPoints, id) {
+      API.putPoints(newPoints, id)
+        .then((res) => loadPoints(res))
+        .catch((err) => console.log(err));
     }
 
     function handleIncrement (task) {
@@ -67,16 +66,13 @@ function ParentBounty(props) {
       console.log("line 65", newPoints);
       setPoints(newPoints);
       setTotalPoints(newPoints);
+      saveTotalPoints(newPoints);
 
       // const localData = localStorage.getItem('tasks')
       // console.log(props);
       // props.state.points = tasks;
-      console.log(tasks, "this is supposed to say tasks");
+      console.log(tasks, "this is supposed to be all tasks");
       deleteTask(task._id);
-      
-
-
-
     };
 
 
@@ -164,7 +160,7 @@ function ParentBounty(props) {
             <div className="col-md-2"></div>
         </div>
         </div>
-        <button className="saveBtn" onClick={() => saveTotalPoints(totalPoints)} name="points">Save</button>
+        <button className="saveBtn" onClick={() => saveTotalPoints()} name="points">Save</button>
 
       <br />
       <form className="row addTaskBox">
@@ -236,7 +232,6 @@ function ParentBounty(props) {
           <div className="row">
             <div className="col-md-3"></div>
             <div id="formBox" className="col-md-5">
-              {/* add onClick={handleFormSubmit} */}
               <button
                 onClick={handleFormSubmit}
                 id="addTask"

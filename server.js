@@ -10,10 +10,7 @@ const app = express();
 const ParentController = require("./controllers/parentController");
 const ChildController = require("./controllers/childController");
 const TaskController = require("./controllers/taskController");
-<<<<<<< HEAD
-=======
 const PointsController = require("./controllers/pointsController");
->>>>>>> parent_bounty
 const UserController = require("./controllers/userController");
 
 app.use(express.urlencoded({ extended: true }));

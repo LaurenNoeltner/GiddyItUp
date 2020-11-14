@@ -1,29 +1,34 @@
 const express = require("express");
 const db = require("../models");
-const jwt = require ('jsonwebtoken');
-const bcrypt = require ('bcrypt');
+// const jwt = require ('jsonwebtoken');
+const bcrypt = require("bcrypt");
 
 const router = express.Router();
 
 router.get("/user", (req, res) => {
-  db.User.find({}).then((allUser) => {
-    console.log(allUser);
-    res.json({ allUser: allUser });
-  }).catch(error => {
-    console.log(error)
-  })
+  db.User.find({})
+    .then((allUser) => {
+      console.log(allUser);
+      res.json({ allUser: allUser });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 });
 
 router.get("/:id", (req, res) => {
   console.log(req.params.id);
   console.log(typeof req.params.id);
-  if (!req.params.id || req.params.id === "null" || req.params.id === "undefined") {
+  if (
+    !req.params.id ||
+    req.params.id === "null" ||
+    req.params.id === "undefined"
+  ) {
     return res.status(500).json({
       error: true,
       data: null,
       message: "no id provided.",
     });
-
   }
   db.User.findById(req.params.id)
     .then((foundUser) => {
@@ -130,8 +135,7 @@ router.post("/login", (req, res) => {
 
 // the total route /api/user/:id
 router.put("/:id", (req, res) => {
-  db.User.findByIdAndUpdate(req.params.id,
-    req.body, { new: true })
+  db.User.findByIdAndUpdate(req.params.id, req.body, { new: true })
     .then((updatedUser) => {
       console.log(updatedUser);
       res.json({

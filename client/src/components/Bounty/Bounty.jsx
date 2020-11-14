@@ -11,6 +11,7 @@ import KidProfile from '../KidProfile/KidProfile';
 
 
 
+
 function Bounty() {
 
     const [tasks, setTasks] = useState([]);

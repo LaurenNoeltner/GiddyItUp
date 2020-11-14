@@ -3,6 +3,11 @@ const Schema = mongoose.Schema;
 
 const PointsSchema = new Schema(
   {
+    // id: {
+    //   type: Number,
+    //   trim: true,
+    //   required: "Points is required",
+    // },
     points: {
       type: Number,
       trim: true,
