@@ -24,7 +24,7 @@ class Saloon extends Component {
                 data-ride="carousel"
                 data-interval="false"
               >
-                <ol className="carousel-indicators">
+                <ol className="carousel-indicators indicators">
                   <li
                     data-target="#carouselExampleIndicators"
                     data-slide-to="0"
@@ -121,11 +121,11 @@ class Saloon extends Component {
                 className="carousel slide"
                 data-ride="carousel"
               >
-                <ol className="carousel-indicators">
+                <ol className="carousel-indicators ">
                   <li
                     data-target="#carouselExampleIndicators"
                     data-slide-to="0"
-                    className="active"
+                    className="active sheriff-indicator"
                   ></li>
                 </ol>
                 <div className="carousel-inner">
@@ -140,7 +140,7 @@ class Saloon extends Component {
                   activeClassName="selected"
                   id="board-link"
                 >
-                  Sheriff's Board
+                  Sheriff's Bounty Board
                 </NavLink>
               </div>
             </div>
