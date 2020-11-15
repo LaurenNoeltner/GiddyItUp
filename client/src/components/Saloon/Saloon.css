@@ -31,10 +31,12 @@ min-width: 1000px!important;
   margin-bottom: 120px;
 }
 .deputy-card {
-  /* margin-left: -150px!important */
+animation: rotateIn 3s;
+
+animation: rotateIn 3s;
 }
 .sheriff-card {
-  /* margin-right: 250px!important */
+  animation: rotateIn 2s, 3s  ;
 }
 .space-between-jumbotron {
   width: 180px!important;
@@ -54,13 +56,19 @@ min-width: 1000px!important;
   font-size: 35px;
   text-shadow: #ffffff 0px 0px 20px;
   text-align: center;
-  animation: lightSpeedInRight; /* referring directly to the animation's @keyframe declaration */
+  animation: hinge; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s;
+  animation-delay: 4s;
 }
-.carousel .carousel-indicators li {
+/* .carousel .carousel-indicators li */
+.indicators {
   background-color: #fff;
   background-color: rgba(70, 70, 70, 0.25);
-  margin-bottom: 180px!important;
+  margin-bottom: 5px;
+}
+.sheriff-indicator {
+  margin-top: 15px!important;
+  
 }
 
 .carousel .carousel-indicators .active {
