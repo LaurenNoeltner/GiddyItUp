@@ -55,12 +55,6 @@ function ParentBounty(props) {
         .catch((err) => console.log(err));
     }
 
-    // function saveTotalPoints(newPoints) {
-    //   API.putPoints("5faf3d071e12384bf094c8ce", totalPoints)
-    //     .then((res) => {console.log("on save this should be current points", totalPoints)})
-    //     .catch(err => console.log(err));
-    // }
-
     function handleIncrement (task) {
       // We always use the setState method to update a component's state
       let newPoints = points;

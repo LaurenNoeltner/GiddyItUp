@@ -39,15 +39,15 @@ function KidProfile() {
             />
             <hr></hr>
             <ul id="kidDetails">
-                <li>First Name: {child.firstName}</li>
-                <li>Last Name: {child.lastName}</li>
-                <li>Age: {child.age}</li>
+                <li><strong>First Name: {child.firstName}</strong></li>
+                <li><strong>Last Name: {child.lastName}</strong></li>
+                <li><strong>Age: {child.age}</strong></li>
                 <img
-              src={MoneyBag}
-              alt="MoneyBag"
-              width="150"
-              height="150"
-            />
+                src={MoneyBag}
+                alt="MoneyBag"
+                width="150"
+                height="150"
+                />
             </ul>
             </div>
             </>
