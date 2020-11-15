@@ -32,7 +32,8 @@ h5 {
   text-align: center;
   font-family: "Cabin Sketch", cursive;
   animation: jello;
-  animation-duration: 4s;
+  animation-duration: 3s;
+  animation-delay: .25s;
 }
 h6 {
   font-size: 20px;
@@ -55,10 +56,12 @@ label {
   width: 110px;
   padding: 8px 0px;
   margin-left: 6px;
+  margin-top: 10px;
 }
-button:hover {
-  background-color: #3f0e0e !important;
-  color: #fff !important;
+.button:hover {
+  background-color: white !important;
+  color: #990000 !important;
+  font-weight: 500;
   border-color: #3b0d0d;
   display: inline-block;
   font-weight: 400;
