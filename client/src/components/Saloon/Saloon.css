@@ -1,54 +1,76 @@
-/* .bg-img {
-  background-image: url("../../images/BgSaloon.png");
+.bg-img {
+  margin-bottom: 280px;
+  width: 1500px;
+  height: 1000px;
+}
+.col-margin {
+  background-image: url("../../images/AttnBountPoster.png");
   background-size: cover;
-  background-attachment: scroll;
   background-repeat: no-repeat;
-} */
-.card {
-  background-image: url("../../images/BgWanted.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 765px;
-  width: 350px;
-  margin-bottom: 220px;
+  height: 580px;
+  margin-bottom: 220px !important;
+  margin-top: 290px!important;
+  background-color: transparent!important; 
+  color: black;
+  cursor: pointer;
+  min-width: 100%!important;
+  border: transparent!important;
+  border-radius: 5px!important;
+}
+.card-margin {
+min-width: 1000px!important;
 }
 .carousel-item {
-  margin-top: 180px;
-  margin-left: 140px;
+  /* margin-left: 40px; */
 }
-.col-3 {
-  margin-top: 350px;
+.carousel-inner {
+  margin-top: 10px!important;
+  margin-left: 90px!important;
 }
 .saloon-card {
   margin-bottom: 120px;
 }
 .deputy-card {
-  width: "150";
-  height: "200";
+  /* margin-left: -150px!important */
+}
+.sheriff-card {
+  /* margin-right: 250px!important */
+}
+.space-between-jumbotron {
+  width: 180px!important;
 }
 .card-title {
-  margin: 10px;
+  margin: 0px!important;
   font-family: "Smokum", cursive;
-  text-shadow: #0e0d0d 0px 0px 5px;
+  text-shadow: #ffffff 0px 0px 5px;
   font-size: 40px;
   font-weight: 700;
   color: black;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 75px!important;
 }
 .board-link {
   font-family: "Smokum", cursive;
   font-size: 35px;
-  /* color: rgb(187, 39, 39) !important; */
-  text-shadow: #10a74a 0px 0px 20px;
+  text-shadow: #ffffff 0px 0px 20px;
   text-align: center;
   animation: lightSpeedInRight; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s;
 }
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
- margin-top: 180px;
+.carousel .carousel-indicators li {
+  background-color: #fff;
+  background-color: rgba(70, 70, 70, 0.25);
+  margin-bottom: 180px!important;
 }
+
+.carousel .carousel-indicators .active {
+  background-color: #444;
+}
+/* .carousel-control-prev-icon,
+.carousel-control-next-icon {
+ margin-top: 80px;
+} */
+/* 
 .carousel-control-prev-icon:after {
     margin-bottom: 30px;
     content: '<';
@@ -60,12 +82,4 @@
   font-size: 35px;
   color: #000000;
 }
-.carousel .carousel-indicators li {
-  background-color: #fff;
-  background-color: rgba(70, 70, 70, 0.25);
-  margin-bottom: 200px;
-}
-
-.carousel .carousel-indicators .active {
-  background-color: #444;
-}
+ */

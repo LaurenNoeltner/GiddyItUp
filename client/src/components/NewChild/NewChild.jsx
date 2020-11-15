@@ -22,6 +22,7 @@ function NewChild() {
       .then((res) => {
         console.log(res);
         setChild(res.data);
+        console.log("this is children", children);
       })
       .catch((err) => console.log(err));
   }
@@ -39,11 +40,13 @@ function NewChild() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
+    console.log(childObject);
     if (childObject.firstName && childObject.lastName) {
       API.saveChild({
         firstName: childObject.firstName,
         lastName: childObject.lastName,
         age: childObject.age,
+        
       })
         .then((res) => loadChild())
         .catch((err) => console.log(err));
@@ -104,6 +107,9 @@ function NewChild() {
                     >
                     </input>
                   </div>
+
+
+                  
 
                   <div className="row">
                     <div className="col text-center">
@@ -191,6 +197,14 @@ function NewChild() {
                     height="200"
                   />
                 </div>
+                <div className="carousel-item">
+                <img
+                    src={DeputyFive}
+                    alt="DeputyFive"
+                    width="150"
+                    height="200"
+                  />
+                </div>
               </div>
               <a
                 className="carousel-control-prev"
@@ -238,13 +252,13 @@ function NewChild() {
               <>
                 <div key={child._id} className="taskContainer create-children col-md-3">
                   <div>
-                    {child.firstName} {child.lastName} {child.age}
+                    {child.firstName} {child.lastName} {child.age} 
                   </div>
                   <hr />
                   <div className="row add-avatar">
                   
                   <img
-                    src={DeputyFive}
+                    src={DeputyFour}
                     alt="DeputyFive"
                     width="150"
                     height="200"
