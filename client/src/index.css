@@ -3,8 +3,9 @@ body {
     padding: 0;
     display: grid;
     font-family: sans-serif;
-    min-height: 95vh;
+    min-height: 110vh;
     background-image: url(../src/images/BgSaloon.png);
+    background-color: #170200;
     background-size: cover;
     background-attachment: local;
     background-repeat: no-repeat;
