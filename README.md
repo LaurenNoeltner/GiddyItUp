@@ -12,6 +12,8 @@ This is an app for parents with young children that uses a game-like system with
 
 Once a parent has been signed-in, they can add children to their account and choose avatars for each child. The parent can also create as many tasks as they would like on the 'Sheriff's Bounty Board' and the child can view the given tasks on the 'Deputy's Bounty Board'. When a child has completed a task, the parent can go into their bounty board page and approve the task by clicking the check mark and the points counter at the top of the page will increment and reflect the current number of points received by the child. They also have the option to delete tasks that were not completed.
 
+![Screenshot](readmeIMG/GiddyItUp_screenshot.png)
+
 ## Table of Contents :
 
 [Title](#Title),
