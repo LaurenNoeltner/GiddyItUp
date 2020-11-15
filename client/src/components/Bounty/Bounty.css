@@ -11,9 +11,10 @@
   font-weight: 700;
   border-radius: 5px;
   background: url("../../images/1aaasilverwinggfairy005.png") no-repeat;
-  background-size: 100%;
+  background-size: 70%;
   background-position: center;
   height: 60px;
+
   /* margin-top: 60px; */
 }
 
@@ -78,6 +79,3 @@
 .spacer {
   margin-top: 20px;
 }
-
-
-
