@@ -116,7 +116,7 @@ function ParentBounty(props) {
             Bounty Board
             </div>
             <div className="col-md-3">
-                <h3>Points: {points}</h3>
+                <h3>Points: {points}</h3>              
             </div>
         </div>
 
