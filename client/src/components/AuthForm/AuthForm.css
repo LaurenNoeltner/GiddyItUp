@@ -17,13 +17,13 @@ label {
   font-weight: 550;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-button {
+/* button {
     background-color: #990000 !important;
     color: #fff!important;
     border-color: #810020;
     display: inline-block;
     font-weight: 400;
-}
+} */
 button:hover{
     background-color: #772111 !important;
     color: #fff!important;
