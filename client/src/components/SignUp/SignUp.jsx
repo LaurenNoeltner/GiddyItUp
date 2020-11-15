@@ -155,8 +155,8 @@ const SignUp = () => {
                 >
                   CREATE ACCOUNT
               </Link> */}
-              <button type="submit" className="btn btn-primary button">
-                Create Account
+              <button type="submit" className="btn btn-light button create-acct-btn">
+                CREATE ACCOUNT
               </button>
                 </div>
               </div>
