@@ -22,6 +22,7 @@ function NewChild() {
       .then((res) => {
         console.log(res);
         setChild(res.data);
+        console.log("this is children", children);
       })
       .catch((err) => console.log(err));
   }
@@ -39,11 +40,13 @@ function NewChild() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
+    console.log(childObject);
     if (childObject.firstName && childObject.lastName) {
       API.saveChild({
         firstName: childObject.firstName,
         lastName: childObject.lastName,
         age: childObject.age,
+        
       })
         .then((res) => loadChild())
         .catch((err) => console.log(err));
@@ -335,6 +338,14 @@ function NewChild() {
                     height="200"
                   />
                 </div>
+                <div className="carousel-item">
+                <img
+                    src={DeputyFive}
+                    alt="DeputyFive"
+                    width="150"
+                    height="200"
+                  />
+                </div>
               </div>
               <a
                 className="carousel-control-prev"
@@ -413,6 +424,42 @@ function NewChild() {
 
                     </div>
 
+<<<<<<< HEAD
+=======
+<div className="container add-child">
+      <div className="row">
+        <div className="jumbotron resize-card col-md-12">
+          <div className="row" id="row1">
+            {children.map((child) => (
+              <>
+                <div key={child._id} className="taskContainer create-children col-md-3">
+                  <div>
+                    {child.firstName} {child.lastName} {child.age} 
+                  </div>
+                  <hr />
+                  <div className="row add-avatar">
+                  
+                  <img
+                    src={DeputyFour}
+                    alt="DeputyFive"
+                    width="150"
+                    height="200"
+                  />
+                
+                  </div>
+                  <div className="del-btn">
+                    <button onClick={() => deleteChild(child._id)}>
+                      <svg
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 16 16"
+                        className="bi bi-person-dash-fill"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5-.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z" />
+                      </svg>
+                    </button>
+>>>>>>> 3b1ec5c338657708d003a047eb23877dc0445529
                   </div>
                 </>
               ))}

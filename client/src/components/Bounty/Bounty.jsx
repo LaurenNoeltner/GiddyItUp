@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-// import ParentBounty from "../ParentBounty/ParentBounty";
+
+import {handleIncrement} from "../ParentBounty/ParentBounty";
 import "./Bounty.css";
 import API from "../utils/API";
 import ChildAPI from '../utils/ChildAPI';
@@ -13,7 +14,7 @@ import KidProfile from '../KidProfile/KidProfile';
 function Bounty() {
 
     const [tasks, setTasks] = useState([]);
-    // const [formObject, setFormObject] = useState ({});
+    
 
     //load all tasks
     useEffect(() => {
@@ -23,44 +24,14 @@ function Bounty() {
     //load all tasks and sets them to tasks
     function loadTasks() {
         API.getTasks()
-            .then(res => {
-                console.log(res);
+            .then((res) => {
+                console.log("This is from bounty.js", res);
                 setTasks(res.data)
             })
-            .catch(err => console.log(err));
+            .catch((err) => console.log(err));
     };
 
     
-
-    // Deletes a book from the database with a given id, then reloads books from the db
-    // function deleteTask(id) {
-    //     API.deleteTask(id)
-    //     .then(res => loadTasks())
-    //     .catch(err => console.log(err));
-    // }
-
-
-    // //handles updating component state when user types into input field
-    // function handleInputChange(event) {
-    //     const { name, value } = event.target;
-    //     setFormObject({...formObject, [name]: value})
-    // };
-
-    // When the form is submitted, use the API.saveTask method to save the task data
-    // Then reload tasks from the database
-    // function handleFormSubmit(event) {
-    //     event.preventDefault();
-    //     if (formObject.task && formObject.points) {
-    //         API.saveTask({
-    //             task: formObject.task,
-    //             location: formObject.location,
-    //             description: formObject.description,
-    //             points: formObject.points
-    //         })
-    //             .then(res => loadTasks())
-    //             .catch(err => console.log(err));
-    //     }
-    // }
     return (
         <>
         <div className="bounty-page">
@@ -72,8 +43,7 @@ function Bounty() {
                     <div className="col-md-3"></div>
                     <div id="boardTitle" className="col-md-5">Bounty Board</div>
                     <div className="col-md-3 ">
-                    <h3 id="Points">Points: ${tasks.points}</h3>
-                       
+                        <h3 id="Points">Points: ${tasks.points}</h3>
                     </div>
                 </div>
 
@@ -100,7 +70,7 @@ function Bounty() {
                                                 <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
                                             </svg>
                                         </button> */}
-                                    </div>
+                                     </div>
                                 </>
                             ))}
                         </div>

@@ -4,62 +4,86 @@ import { Link } from "react-router-dom";
 import "./ParentBounty.css";
 import "../Bounty/Bounty.css";
 import API from "../utils/API";
-import Counter from "../Counter/Counter";
+
+
+
 
 function ParentBounty(props) {
 
 
   const [tasks, setTasks] = useState([]);
   const [formObject, setFormObject] = useState({});
-  const [points, setPoints] = useState(0);
-  
+  const [points, setPoints] = useState(Number);
+  const [totalPoints, setTotalPoints] = useState(Number);
 
-  //load all tasks
+  // var localPoints = localStorage.getItem('tasks');
+
   useEffect(() => {
+    // setPoints();
     loadTasks();
+    loadPoints();
+    // localStorage.setItem("tasks", points);
+    // console.log(localPoints);
+
+
   }, []);
 
+
   //load all tasks and sets them to tasks
-  function loadTasks() {
-    API.getTasks()
-      .then((res) => {
-        console.log(res);
-        setTasks(res.data);
-      })
-      .catch((err) => console.log(err));
-  }
+    function loadTasks() {
+      API.getTasks()
+        .then((res) => {
+          // console.log(res);
+          setTasks(res.data);
+        })
+        .catch((err) => console.log(err));
+
+    }
+
 
     // Deletes a task from the database with a given id, then reloads task from the db
     function deleteTask(id) {
         API.deleteTask(id)
         .then(res => loadTasks())
-        .catch(err => console.log(err));
+        .catch((err) => console.log(err));
         
     }
 
+    function loadPoints() {
+      API.getPoints()
+        .then((res) => {console.log("this is load points", res.data.points)})
+        .catch((err) => console.log(err));
+    }
 
-
-    // TODO:  modify to make points increment every time
-    // handleIncrement = (props) => {
-        
-    //     this.setState({ points: this.state.points + props.points })
-    //     API.deleteTask()
-    //     .then(res => loadTasks())
+    // function saveTotalPoints(newPoints) {
+    //   API.putPoints("5faf3d071e12384bf094c8ce", totalPoints)
+    //     .then((res) => {console.log("on save this should be current points", totalPoints)})
     //     .catch(err => console.log(err));
-        
     // }
 
     function handleIncrement (task) {
       // We always use the setState method to update a component's state
       let newPoints = points;
       newPoints = parseInt(newPoints) + parseInt(task.points);
-      console.log(newPoints);
+      console.log("line 65", newPoints);
+      
+      // saveTotalPoints(newPoints);
+      API.putPoints("5faf3d071e12384bf094c8ce", newPoints)
+        .then((res) => {console.log("on save this should be current points", newPoints)})
+        .catch(err => console.log(err));
+
+
       setPoints(newPoints);
+      setTotalPoints(newPoints);
+      // const localData = localStorage.getItem('tasks')
       // console.log(props);
       // props.state.points = tasks;
       console.log(tasks, "this is supposed to say tasks");
       deleteTask(task._id);
       
+
+
+
     };
 
 
@@ -131,7 +155,7 @@ function ParentBounty(props) {
                         </div>
                         <hr />
                         <div id="placeText">
-                            <strong>Place:</strong> {task.location} 
+                            <strong>Place: </strong> {task.location} 
                         </div>
                         <div id="notesText"><strong>Notes: </strong>{task.description}</div>
                         <button className="check-btn" onClick={() => handleIncrement(task)}>
@@ -147,6 +171,7 @@ function ParentBounty(props) {
             <div className="col-md-2"></div>
         </div>
         </div>
+        {/* <button className="saveBtn" onClick={() => saveTotalPoints(totalPoints)} name="points">Save</button> */}
 
       <br />
       <form className="row addTaskBox">
