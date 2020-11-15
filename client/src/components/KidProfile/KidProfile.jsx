@@ -42,12 +42,12 @@ function KidProfile() {
                 <li>First Name: {child.firstName}</li>
                 <li>Last Name: {child.lastName}</li>
                 <li>Age: {child.age}</li>
-                <img
+                {/* <img
               src={MoneyBag}
               alt="MoneyBag"
               width="150"
               height="150"
-            />
+            /> */}
             </ul>
             </div>
             </>
