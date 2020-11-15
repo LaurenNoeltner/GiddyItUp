@@ -10,6 +10,7 @@
   text-shadow: white 0px 0px 20px;
   animation: rubberBand;
   animation-duration: 1s;
+  animation-delay: 1s;
   margin-top: -30px;
   margin-bottom: 30px;
 }
@@ -36,11 +37,11 @@ h6 {
   width: 180px !important;
   padding: 8px 0px;
   margin-left: 6px;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 button:hover {
-  background-color: #772111 !important;
-  color: #fff !important;
+  background-color: white !important;
+  color: #772111 !important;
   border-color: #3b0d0d;
   display: inline-block;
   font-weight: 400;
@@ -48,9 +49,11 @@ button:hover {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.carousel-inner {
-  margin-top: -150px;
-  margin-left: auto;
+.carousel-align {
+  margin-top: -20px!important;
+  margin-left: 0px! important;
+  padding-top: 50px;
+  padding-bottom: 10px;
 }
 .saloon-card {
   margin-bottom: 120px;
@@ -84,7 +87,8 @@ button:hover {
 }
 .carousel .carousel-indicators li {
   background-color: #fff;
-  background-color: rgba(70, 70, 70, 0.25);
+  background-color: #46464640;
+  margin-bottom: -30px;
 }
 
 .carousel .carousel-indicators .active {
@@ -97,10 +101,15 @@ button:hover {
 button {
   border-color: rgb(0, 0, 0);
   background-color: #990000;
-  border-radius: 5px;
-  padding: 3px 8px;
+  border-radius: 25px;
+  padding: 2px 8px;
 }
-
+button {
+  border-color: rgb(0, 0, 0);
+  background-color: #990000;
+  border-radius: 25px;
+  padding: 2px 8px;
+}
 .create-children {
   font-size: 25px;
   color: rgb(6, 17, 41);
@@ -118,6 +127,10 @@ button {
   animation: rubberBand;
   animation-duration: 2s;
 }
+hr {
+  color: #990000;
+  height: 2px;
+}
 .add-child {
   margin-top: 50px;
 }
@@ -127,7 +140,7 @@ button {
     background-repeat: no-repeat;
 } */
 .del-btn {
-  margin-top: 40px !important;
+  margin-top: 30px !important;
 }
 .add-avatar {
   margin-left: 30px !important;
@@ -143,4 +156,7 @@ button {
 }
 .resize-card {
   padding: 30px 32px !important;
+}
+.taskContainer {
+  margin-left: 30px;
 }
