@@ -15,6 +15,7 @@ function ParentBounty(props) {
   const [formObject, setFormObject] = useState({});
   const [points, setPoints] = useState(Number);
   const [totalPoints, setTotalPoints] = useState(Number);
+  const [previousPoints, setPreviousPoints] = useState("");
 
   // var localPoints = localStorage.getItem('tasks');
 
@@ -22,7 +23,6 @@ function ParentBounty(props) {
     // setPoints();
     loadTasks();
     loadPoints();
-    // localStorage.setItem("tasks", points);
     // console.log(localPoints);
 
 
@@ -51,15 +51,9 @@ function ParentBounty(props) {
 
     function loadPoints() {
       API.getPoints()
-        .then((res) => {console.log("this is load points", res.data.points)})
+        .then((res) => {setPreviousPoints(res.data.points)})
         .catch((err) => console.log(err));
     }
-
-    // function saveTotalPoints(newPoints) {
-    //   API.putPoints("5faf3d071e12384bf094c8ce", totalPoints)
-    //     .then((res) => {console.log("on save this should be current points", totalPoints)})
-    //     .catch(err => console.log(err));
-    // }
 
     function handleIncrement (task) {
       // We always use the setState method to update a component's state
@@ -75,9 +69,7 @@ function ParentBounty(props) {
 
       setPoints(newPoints);
       setTotalPoints(newPoints);
-      // const localData = localStorage.getItem('tasks')
-      // console.log(props);
-      // props.state.points = tasks;
+      
       console.log(tasks, "this is supposed to say tasks");
       deleteTask(task._id);
       
@@ -122,7 +114,7 @@ function ParentBounty(props) {
             Bounty Board
             </div>
             <div className="col-md-3">
-                <h3>Points: {points}</h3>
+                <h3>Points: {previousPoints}</h3>              
             </div>
         </div>
 
