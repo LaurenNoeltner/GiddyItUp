@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from 'react';
-
 import "./Bounty.css";
 import API from "../utils/API";
 import KidProfile from '../KidProfile/KidProfile';
 
 
-
-
-
-
 function Bounty() {
 
     const [tasks, setTasks] = useState([]);
-    
 
     //load all tasks
     useEffect(() => {

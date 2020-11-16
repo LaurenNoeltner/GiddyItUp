@@ -17,15 +17,9 @@ function ParentBounty(props) {
   const [totalPoints, setTotalPoints] = useState(Number);
   const [previousPoints, setPreviousPoints] = useState("");
 
-  // var localPoints = localStorage.getItem('tasks');
-
   useEffect(() => {
-    // setPoints();
     loadTasks();
     loadPoints();
-    // console.log(localPoints);
-
-
   }, []);
 
 
@@ -33,13 +27,10 @@ function ParentBounty(props) {
     function loadTasks() {
       API.getTasks()
         .then((res) => {
-          // console.log(res);
           setTasks(res.data);
         })
         .catch((err) => console.log(err));
-
     }
-
 
     // Deletes a task from the database with a given id, then reloads task from the db
     function deleteTask(id) {
@@ -220,7 +211,6 @@ function ParentBounty(props) {
           <div className="row">
             <div className="col-md-3"></div>
             <div id="formBox" className="col-md-5">
-              {/* add onClick={handleFormSubmit} */}
               <button
                 onClick={handleFormSubmit}
                 id="addTask"
