@@ -32,7 +32,8 @@ function KidProfile() {
             <div key={child._id} className="col-md-4"></div>
             <div id="kidProfile" className="col-md-4">Deputy on Duty
             <img
-              src={DeputyTwo}
+        
+              src={`../images/${child.avatar}.png`}
               alt="DeputyTwo"
               width="150"
               height="200"
@@ -42,12 +43,7 @@ function KidProfile() {
                 <li>First Name: {child.firstName}</li>
                 <li>Last Name: {child.lastName}</li>
                 <li>Age: {child.age}</li>
-                {/* <img
-              src={MoneyBag}
-              alt="MoneyBag"
-              width="150"
-              height="150"
-            /> */}
+                
             </ul>
             </div>
             </>
