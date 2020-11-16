@@ -10,22 +10,20 @@ import DeputyFive from "../../images/DeputyTeen.png";
 
 
 function NewChild() {
-  const [children, setChildren] = useState([]);
+  const [children, setChild] = useState([]);
   const [childObject, setChildObject] = useState({});
 
   useEffect(() => {
     loadChild();
   }, []);
 
-  function avatarChanged(name) {
-
-  }
+  
 
   function loadChild() {
     API.getChild()
       .then((res) => {
         console.log(res);
-        setChildren(res.data);
+        setChild(res.data);
         console.log("this is children", children);
       })
       .catch((err) => console.log(err));
