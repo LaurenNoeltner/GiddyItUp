@@ -2,10 +2,6 @@
   align-content: center;
   font-size: larger;
   text-align: center;
-  /* background-color: peru; */
-  /* border-style: solid;
-  border-width: 2px;
-  border-color: chocolate; */
   font-family: "Smokum", cursive;
   font-size: 35px;
   font-weight: 700;
@@ -14,8 +10,6 @@
   background-size: 70%;
   background-position: center;
   height: 60px;
-
-  /* margin-top: 60px; */
 }
 
 .board-row {
@@ -29,7 +23,6 @@
   padding: 10px;
   margin: 10px;
   background: url("../../images/cork-board.png");
-  /* margin-top: 100px; */
   border-image: url("../../images/dark_wood.png") 25 25 round;
 }
 
@@ -59,16 +52,12 @@
 }
 .bounty-page {
   margin-top: 250px;
-  /* min-height: 1000px; */
 }
 
 .bounty-board {
   margin-bottom: 70px;
 }
-/* .bounty-container {
-  margin-bottom: 300px;
 
-} */
 .bounty-space {
   margin-bottom: 300px;
 }

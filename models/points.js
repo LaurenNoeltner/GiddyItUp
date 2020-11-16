@@ -12,17 +12,10 @@ const PointsSchema = new Schema(
   { toJSON: { virtuals: true } }
 );
 
-// userSchema.virtual("domain").get(function () {
-//   return this.email.slice(this.email.indexOf("@") + 1);
-// });
 PointsSchema.virtual("score").get(function () {
   return `${this.points}`;
   console.log(this.points);
 });
-
-// AuthorSchema.virtual("numBooks").get(function(){
-//     return this.books.length;
-// })
 
 const Points = mongoose.model("Points", PointsSchema);
 

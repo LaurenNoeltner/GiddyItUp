@@ -18,7 +18,7 @@ export default {
     return axios.post("/api/tasks", taskData);
   },
 
-  ///do this for points too VVVVV
+  // points API calls
   getPoints: function () {
     return axios.get("/api/points/5faf3d071e12384bf094c8ce");
   },
