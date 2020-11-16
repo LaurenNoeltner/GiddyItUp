@@ -18,6 +18,10 @@ const ChildSchema = new Schema(
         trim: true,
         required: "Age is required",
       },
+      avatar: {
+        type: String,
+        trim: true        
+      },
   },
   { toJSON: { virtuals: true } }
 );
