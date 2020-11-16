@@ -10,18 +10,22 @@ import DeputyFive from "../../images/DeputyTeen.png";
 
 
 function NewChild() {
-  const [children, setChild] = useState([]);
+  const [children, setChildren] = useState([]);
   const [childObject, setChildObject] = useState({});
 
   useEffect(() => {
     loadChild();
   }, []);
 
+  function avatarChanged(name) {
+
+  }
+
   function loadChild() {
     API.getChild()
       .then((res) => {
         console.log(res);
-        setChild(res.data);
+        setChildren(res.data);
         console.log("this is children", children);
       })
       .catch((err) => console.log(err));
@@ -46,7 +50,8 @@ function NewChild() {
         firstName: childObject.firstName,
         lastName: childObject.lastName,
         age: childObject.age,
-        
+        avatar: childObject.avatar
+
       })
         .then((res) => loadChild())
         .catch((err) => console.log(err));
@@ -111,19 +116,23 @@ function NewChild() {
                   </div>
 
                   <div className="form-group">
-                    <input
-                      name="Pick Avatar"
-                      onChange={handleInputChange}
-                      type=""
-                      className="form-control"
-                      id="childAvatar"
-                      placeholder="Pick an Avatar for your Deputy"
+                    
+                    <select name="avatar" onChange={handleInputChange}
+
                     >
-                    </input>
+                      <option value="DeputyGirl">Deputy 1</option>
+                      <option value="DeputyBoy">Deputy 2</option>
+                      <option value="DeputyFemale">Deputy 3</option>
+                      <option value="DeputyMask">Deputy 4</option>
+                      <option value="DeputyTeen">Deputy 5</option>
+
+                    </select>
+
+
                   </div>
 
-                  <h7> Sort through carousel to choose an Avatar for your child</h7>
-                  
+                  <h6 className="instructions"> Sort through the carousel to view available Avatars for your child.</h6>
+
                   <div
                     id="carouselExampleIndicators"
                     className="carousel slide"
@@ -156,7 +165,7 @@ function NewChild() {
                           alt="DeputyOne"
                           width="150"
                           height="200"
-                        />
+                        /><div>Deputy 1</div>
                       </div>
                       <div className="carousel-item">
                         <img
@@ -164,7 +173,7 @@ function NewChild() {
                           alt="DeputyTwo"
                           width="150"
                           height="200"
-                        />
+                        /><div>Deputy 2</div>
                       </div>
                       <div className="carousel-item">
                         <img
@@ -172,7 +181,7 @@ function NewChild() {
                           alt="DeputyThree"
                           width="150"
                           height="200"
-                        />
+                        /><div>Deputy 3</div>
                       </div>
                       <div className="carousel-item">
                         <img
@@ -180,14 +189,24 @@ function NewChild() {
                           alt="DeputyFour"
                           width="150"
                           height="200"
-                        />
+                        /><div>Deputy 4</div>
                       </div>
+                      <div className="carousel-item">
+                        <img
+                          src={DeputyFive}
+                          alt="DeputyFive"
+                          width="150"
+                          height="200"
+                        /><div>Deputy 5</div>
+                      </div>
+
                     </div>
                     <a
                       className="carousel-control-prev"
                       href="#carouselExampleIndicators"
                       role="button"
                       data-slide="prev"
+                      onClick={() => avatarChanged("Coco1")}
                     >
                       <span
                         className="carousel-control-prev-icon"
@@ -200,6 +219,7 @@ function NewChild() {
                       href="#carouselExampleIndicators"
                       role="button"
                       data-slide="next"
+                      onClick={() => avatarChanged("Coco2")}
                     >
                       <span
                         className="carousel-control-next-icon"
@@ -246,161 +266,11 @@ function NewChild() {
                     <div>
                       {child.firstName} {child.lastName} {child.age}
                     </div>
-                    <hr  />
-                    <div className="row add-avatar">
-
-                      <img
-                        src={DeputyFive}
-                        alt="DeputyFive"
-                        width="150"
-                        height="200"
-                      />
-
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12 text-right del-btn">
-                        <button onClick={() => deleteChild(child._id)}>
-                          <svg
-                            width="1em"
-                            height="1em"
-                            viewBox="0 0 16 16"
-                            className="bi bi-person-dash-fill"
-                            fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5-.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z" />
-                          </svg>
-                        </button>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </>
-              ))}
-            </div>
-
-            {/* 
-            <div
-              id="carouselExampleIndicators"
-              className="carousel slide"
-              data-ride="carousel"
-              data-interval="false"
-            >
-              <ol className="carousel-indicators">
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="0"
-                  className="active"
-                ></li>
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="1"
-                ></li>
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="2"
-                ></li>
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="3"
-                ></li>
-              </ol>
-              <div className="carousel-inner carousel-align">
-                <div className="carousel-item active">
-                  <img
-                    src={DeputyOne}
-                    alt="DeputyOne"
-                    width="150"
-                    height="200"
-                  />
-                </div>
-                <div className="carousel-item">
-                  <img
-                    src={DeputyTwo}
-                    alt="DeputyTwo"
-                    width="150"
-                    height="200"
-                  />
-                </div>
-                <div className="carousel-item">
-                  <img
-                    src={DeputyThree}
-                    alt="DeputyThree"
-                    width="150"
-                    height="200"
-                  />
-                </div>
-                <div className="carousel-item">
-                  <img
-                    src={DeputyFour}
-                    alt="DeputyFour"
-                    width="150"
-                    height="200"
-                  />
-                </div>
-                <div className="carousel-item">
-                <img
-                    src={DeputyFive}
-                    alt="DeputyFive"
-                    width="150"
-                    height="200"
-                  />
-                </div>
-              </div>
-              <a
-                className="carousel-control-prev"
-                href="#carouselExampleIndicators"
-                role="button"
-                data-slide="prev"
-              >
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="sr-only">Previous</span>
-              </a>
-              <a
-                className="carousel-control-next"
-                href="#carouselExampleIndicators"
-                role="button"
-                data-slide="next"
-              >
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="sr-only">Next</span>
-              </a>
-            </div>
-       */}
-            {/* <div className="board-link">
-                <NavLink to="/Bounty" activeClassName="selected">
-                  Bounty Board
-                </NavLink>
-              </div> */}
-            {/* </div> */}
-
-          </div>
-        </div>
-      </div>
-
-{/* 
-      <div className="container add-child">
-        <div className="row">
-          <div className="jumbotron resize-card col-md-12">
-
-            <div className="row" id="row1">
-              {children.map((child) => (
-                <>
-                  <div key={child._id} className="taskContainer create-children col-md-3">
-                    <div>
-                      {child.firstName} {child.lastName} {child.age}
-                    </div>
                     <hr />
                     <div className="row add-avatar">
 
                       <img
-                        src={DeputyFive}
+                        src={`../images/${child.avatar}.png`}
                         alt="DeputyFive"
                         width="150"
                         height="200"
@@ -424,53 +294,16 @@ function NewChild() {
 
                     </div>
 
-<<<<<<< HEAD
-=======
-<div className="container add-child">
-      <div className="row">
-        <div className="jumbotron resize-card col-md-12">
-          <div className="row" id="row1">
-            {children.map((child) => (
-              <>
-                <div key={child._id} className="taskContainer create-children col-md-3">
-                  <div>
-                    {child.firstName} {child.lastName} {child.age} 
-                  </div>
-                  <hr />
-                  <div className="row add-avatar">
-                  
-                  <img
-                    src={DeputyFour}
-                    alt="DeputyFive"
-                    width="150"
-                    height="200"
-                  />
-                
-                  </div>
-                  <div className="del-btn">
-                    <button onClick={() => deleteChild(child._id)}>
-                      <svg
-                        width="1em"
-                        height="1em"
-                        viewBox="0 0 16 16"
-                        className="bi bi-person-dash-fill"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5-.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z" />
-                      </svg>
-                    </button>
->>>>>>> 3b1ec5c338657708d003a047eb23877dc0445529
                   </div>
                 </>
               ))}
             </div>
 
           </div>
-
         </div>
-
       </div>
-     */}
+
+
     </div>
 
   );
