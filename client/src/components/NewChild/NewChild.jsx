@@ -10,22 +10,20 @@ import DeputyFive from "../../images/DeputyTeen.png";
 
 
 function NewChild() {
-  const [children, setChildren] = useState([]);
+  const [children, setChild] = useState([]);
   const [childObject, setChildObject] = useState({});
 
   useEffect(() => {
     loadChild();
   }, []);
 
-  function avatarChanged(name) {
-
-  }
+  
 
   function loadChild() {
     API.getChild()
       .then((res) => {
         console.log(res);
-        setChildren(res.data);
+        setChild(res.data);
         console.log("this is children", children);
       })
       .catch((err) => console.log(err));
@@ -201,20 +199,20 @@ function NewChild() {
                       </div>
 
                     </div>
-                    <a
+                    {/* <a
                       className="carousel-control-prev"
                       href="#carouselExampleIndicators"
                       role="button"
                       data-slide="prev"
                       onClick={() => avatarChanged("Coco1")}
-                    >
-                      <span
+                    > */}
+                      {/* <span
                         className="carousel-control-prev-icon"
                         aria-hidden="true"
                       ></span>
                       <span className="sr-only">Previous</span>
-                    </a>
-                    <a
+                    </a> */}
+                    {/* <a
                       className="carousel-control-next"
                       href="#carouselExampleIndicators"
                       role="button"
@@ -226,7 +224,7 @@ function NewChild() {
                         aria-hidden="true"
                       ></span>
                       <span className="sr-only">Next</span>
-                    </a>
+                    </a> */}
                   </div>
 
 
