@@ -9,7 +9,7 @@ GiddyItUp
 Howdy, Partner!!
 There's a new sheriff in town, and new deputies too! Gather your deputies now to start turning in bounties for rewards!
 
-This is an app for parents with young children that uses a game-like system with an Western theme to encourage their children to go above and beyond with their household chores by offering a 'bounty reward' system in which they receive points for completing 'bounties' (tasks). The children can use these points as a currency for extra privileges at home, such as extra screen-time, an extended bedtime, a treat at the candy store, or anything else the parent can think of!
+This is an app for parents with young children and uses a game-like system with a Wild West theme to encourage their children to go above and beyond with their household chores by offering a 'bounty reward' system in which they receive points for completing 'bounties' (tasks). The children can use these points as a currency for extra privileges at home, such as extra screen-time, an extended bedtime, a treat at the candy store, or anything else the parent can think of!
 
 Once a parent has been signed-in, they can add children to their account and choose avatars for each child. The parent can also create as many tasks as they would like on the 'Sheriff's Bounty Board' and the child can view the given tasks on the 'Deputy's Bounty Board'. When a child has completed a task, the parent can go into their bounty board page and approve the task by clicking the check mark and the points counter at the top of the page will increment and reflect the current number of points received by the child. They also have the option to delete tasks that were not completed.
 
@@ -37,7 +37,7 @@ This project is licensed under the MIT license.
 
 ## Contributors
 
-- Jimmy Alonzo
+- Jimmy Alonso
 - Evelyn Goris
 - Kesha Hall
 - Lauren Noeltner
@@ -50,7 +50,7 @@ This project is licensed under the MIT license.
 
 You can ask questions on GitHub at:
 
-- Jimmy Alonzo: https://github.com/jvalon9455
+- Jimmy Alonso: https://github.com/jvalon9455
 - Evelyn Goris: https://github.com/SIROG-E
 - Kesha Hall: https://github.com/hallkr86
 - Lauren Noeltner: https://www.github.com/LNoeltner1
