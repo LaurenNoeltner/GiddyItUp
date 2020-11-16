@@ -23,10 +23,8 @@ router.post("/", (req, res) => {
   });
 });
 
-//i hate this stupid function more than anything I've ever dealt with in my entire freaking life
 router.put("/:id", (req, res) => {
   let numberPoints = Object.keys(req.body)[0];
-  // db.Points.findByIdAndUpdate(req.params.id, req.body, {
   db.Points.updateOne({
     id: "5faf3d071e12384bf094c8ce",
     points: numberPoints,

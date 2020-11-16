@@ -17,16 +17,9 @@ const ParentSchema = new Schema(
   { toJSON: { virtuals: true } }
 );
 
-// userSchema.virtual("domain").get(function () {
-//   return this.email.slice(this.email.indexOf("@") + 1);
-// });
 ParentSchema.virtual("fullName").get(function () {
   return `${this.firstName} ${this.lastName}`;
 });
-
-// AuthorSchema.virtual("numBooks").get(function(){
-//     return this.books.length;
-// })
 
 const Parent = mongoose.model("Parent", ParentSchema);
 

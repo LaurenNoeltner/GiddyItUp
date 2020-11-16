@@ -14,24 +14,17 @@ const ChildSchema = new Schema(
       required: "Last name is required",
     },
     age: {
-        type: String,
-        trim: true,
-        required: "Age is required",
-      },
+      type: String,
+      trim: true,
+      required: "Age is required",
+    },
   },
   { toJSON: { virtuals: true } }
 );
 
-// userSchema.virtual("domain").get(function () {
-//   return this.email.slice(this.email.indexOf("@") + 1);
-// });
 ChildSchema.virtual("fullName").get(function () {
   return `${this.firstName} ${this.lastName}`;
 });
-
-// AuthorSchema.virtual("numBooks").get(function(){
-//     return this.books.length;
-// })
 
 const Child = mongoose.model("Child", ChildSchema);
 
