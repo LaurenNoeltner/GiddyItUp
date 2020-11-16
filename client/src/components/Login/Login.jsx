@@ -128,7 +128,7 @@ const Login = () => {
               If not, go wrangle them up and lets get this started!
             </h6>
             <hr />
-            <h6 className="my-2 text-center">We collect user information in our database, including the children's information, solely for the purpose of being able to save your account information. We do not sell or share this information with any group or persons.</h6>
+            <h6 className="my-2  disclaimer text-center">We collect user information in our database, including the children's information, solely for the purpose of being able to save your account information. We do not sell or share this information with any group or persons.</h6>
           </div>
         </div>
       </div>

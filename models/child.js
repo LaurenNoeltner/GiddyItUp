@@ -14,10 +14,14 @@ const ChildSchema = new Schema(
       required: "Last name is required",
     },
     age: {
-      type: String,
-      trim: true,
-      required: "Age is required",
-    },
+        type: String,
+        trim: true,
+        required: "Age is required",
+      },
+      avatar: {
+        type: String,
+        trim: true        
+      },
   },
   { toJSON: { virtuals: true } }
 );

@@ -42,6 +42,14 @@ h6 {
   animation: bounceInUp;
   animation-duration: 3s;
 }
+.disclaimer {
+  font-size: 16px;
+  text-align: center;
+  font-family: "Rye", cursive;
+  animation: bounceInUp;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+}
 label {
   font-size: 20px;
   font-weight: 550;
