@@ -27,16 +27,9 @@ const TaskSchema = new Schema(
   { toJSON: { virtuals: true } }
 );
 
-// userSchema.virtual("domain").get(function () {
-//   return this.email.slice(this.email.indexOf("@") + 1);
-// });
 TaskSchema.virtual("chore").get(function () {
   return `${this.task} ${this.description}`;
 });
-
-// AuthorSchema.virtual("numBooks").get(function(){
-//     return this.books.length;
-// })
 
 const Task = mongoose.model("Task", TaskSchema);
 

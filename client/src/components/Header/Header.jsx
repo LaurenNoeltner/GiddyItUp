@@ -8,7 +8,7 @@ class Header extends Component {
         return (
             <div>
                 <div>
-                    <Navbar expand="lg" variant="light" bg="faded">
+                    <Navbar expand="lg" variant="light" bg="fade">
                         <h1 id="navbarLogo" ><NavLink id="headBtn" to="/"  activeClassName="selected">GiddyItUp</NavLink></h1>
                         <div className="ml-3 headBtn"><NavLink id="headBtn" to="/Saloon"  activeClassName="selected">Saloon</NavLink></div>
                         <div className="ml-3 headBtn"><NavLink id="headBtn" to="/Bounty" activeClassName="selected">Bounty Board</NavLink></div> 

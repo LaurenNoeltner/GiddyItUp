@@ -17,15 +17,9 @@ function ParentBounty(props) {
   const [totalPoints, setTotalPoints] = useState(Number);
   const [previousPoints, setPreviousPoints] = useState("");
 
-  // var localPoints = localStorage.getItem('tasks');
-
   useEffect(() => {
-    // setPoints();
     loadTasks();
     loadPoints();
-    // console.log(localPoints);
-
-
   }, []);
 
 
@@ -33,13 +27,10 @@ function ParentBounty(props) {
     function loadTasks() {
       API.getTasks()
         .then((res) => {
-          // console.log(res);
           setTasks(res.data);
         })
         .catch((err) => console.log(err));
-
     }
-
 
     // Deletes a task from the database with a given id, then reloads task from the db
     function deleteTask(id) {
@@ -63,25 +54,12 @@ function ParentBounty(props) {
       
       // saveTotalPoints(newPoints);
       API.putPoints("5faf3d071e12384bf094c8ce", newPoints)
-        .then((res) => {console.log("on save this should be current points", newPoints)})
+        .then((res) => {console.log("Current points: ", newPoints)})
         .catch(err => console.log(err));
-
-
       setPoints(newPoints);
       setTotalPoints(newPoints);
-      
-      console.log(tasks, "this is supposed to say tasks");
       deleteTask(task._id);
-      
-
-
-
     };
-
-
-
-
-
 
   //handles updating component state when user types into input field
   function handleInputChange(event) {
@@ -163,8 +141,6 @@ function ParentBounty(props) {
             <div className="col-md-2"></div>
         </div>
         </div>
-        {/* <button className="saveBtn" onClick={() => saveTotalPoints(totalPoints)} name="points">Save</button> */}
-
       <br />
       <form className="row addTaskBox">
         <div className="col-md-2"></div>
@@ -235,7 +211,6 @@ function ParentBounty(props) {
           <div className="row">
             <div className="col-md-3"></div>
             <div id="formBox" className="col-md-5">
-              {/* add onClick={handleFormSubmit} */}
               <button
                 onClick={handleFormSubmit}
                 id="addTask"
